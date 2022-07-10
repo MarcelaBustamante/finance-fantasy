@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1503,8 +1503,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wall_12: 1729367860
       wall_11: -1830034939
+      house_07: 1567957336
       pollo_01: 1602605763
       wall_30: -364650990
       wall_0: -1268927766
@@ -1529,10 +1529,10 @@ TextureImporter:
       wall_29: -1435174911
       house_08: -1699756048
       wall_9: -127499435
-      house_02: 1119008038
+      pollo_03: 1315249985
       floor_0: -1899138894
       wall_15: 2093505782
-      pollo_03: 1315249985
+      house_02: 1119008038
       house_04: -2141276485
       tree_03: -500326544
       house_20: 564745712
@@ -1567,8 +1567,8 @@ TextureImporter:
       pollo_05d: 1365702023
       house_17: 420008314
       tree_04: -187763744
-      house_07: 1567957336
       pollo_02: 44138867
+      wall_12: 1729367860
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
