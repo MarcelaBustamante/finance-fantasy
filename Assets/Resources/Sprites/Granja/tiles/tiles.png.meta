@@ -2845,7 +2845,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2866,7 +2866,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2887,7 +2887,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2908,7 +2908,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2929,7 +2929,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2950,7 +2950,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2958,6 +2958,342 @@ TextureImporter:
       bones: []
       spriteID: 60c8847dc0cff4c088063c847ae6e3fd
       internalID: -794314227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_01
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7955b55e7ac946d9ae0a4a1508f51b9
+      internalID: -1509213435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_02
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e75cea99f29c4fefa246c8ac415c9f9
+      internalID: -423494085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_03
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ad6a6b64e5f452eae58c8f01cd20ac
+      internalID: 126544284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock_04
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684c4b951affa4f69b100a7e571ab5ce
+      internalID: -1872923993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: espanta_01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ff7cad19f6040709df21c3875f5b78
+      internalID: -1611030551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: espanta_02
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673397f3d07204949b22df5d6c991cf5
+      internalID: 1744984912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: florroja_01
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cbb85e76e9e43899b8bfdc3136b47a
+      internalID: 504147717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: florroja_02
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5115e4aed060343e0a3578aa01b10f59
+      internalID: -2088884276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: florroja_04
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e7fa3b098224ff2bf412c4918d11b7
+      internalID: -1835721180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: florroja_0
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 736
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec8149fea9ab438782c967c19580013
+      internalID: 1022231926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muelle_03
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cac04c139a634768875a9de67fcfd37
+      internalID: -166465258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piedrita_01
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 216
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8bec447a0674a4a81ac255a06ccfca
+      internalID: -2070703262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piedrita_03
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 200
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb7c1d9b3b6945b8a94a13eec82dd8c
+      internalID: -2137127893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piedrita_02
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 216
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da02fb6f52a14c778ebbc8c002dbc69
+      internalID: 481365757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piedrita_04
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 200
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612c66091d4f3430192a746989a907e7
+      internalID: 1968335858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piedrita_05
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce00dc254ed08428a961cfa33a1faef8
+      internalID: -1293974631
       vertices: []
       indices: 
       edges: []
@@ -2984,6 +3320,7 @@ TextureImporter:
       farolverdeoff_01: -1624204602
       agtierra_28: -1568108166
       tierra_08: -363750643
+      piedrita_02: 481365757
       florazul_01: -356226853
       farolverde_03: 1476565844
       agtierra_01: 873046463
@@ -3003,17 +3340,21 @@ TextureImporter:
       florazul_02: -943821415
       arbol_03: -513365705
       maceta_02: -1500324208
+      florroja_0: 1022231926
       arbol1_06: 613139728
       farolverde_01: 11785027
       barro_03: -1800579566
       tierra_04: -933155188
+      piedrita_03: -2137127893
       farolnegro_06: 348948447
       muelle_01: -849618821
       corral_04: 824028050
       farolnegro_01: -1589185917
       agtierra_17: 276360048
+      rock_04: -1872923993
       agplanta_01: -987565143
       corral_03: 337277548
+      piedrita_05: -1293974631
       agtierra_20: 1164298877
       barro_01: -793600109
       barro_07: 1292812751
@@ -3029,6 +3370,8 @@ TextureImporter:
       farolverde_02: -1812863474
       arbol_05: 1540830141
       tierra_01: -1352095583
+      rock_01: 1767913929
+      florroja_01: 504147717
       agonda_07: -381990790
       tierra_06: -1494954270
       agtierra_18: 2001289286
@@ -3041,7 +3384,9 @@ TextureImporter:
       agtierra_02: -1101001618
       arbol1_02: 797077161
       agtierra_29: 1871134186
-      tiles_0: 1767913929
+      rock_02: -423494085
+      florroja_02: -2088884276
+      piedrita_01: -2070703262
       arbusto_04: -794314227
       agtierra_19: -1503010575
       agtierra_24: 1437520355
@@ -3049,6 +3394,7 @@ TextureImporter:
       agtierra_16: 15650804
       arbol1_03: -488230571
       agtierra_03: -1478698911
+      florroja_04: -1835721180
       agtierra_22: 283274150
       corral_02: 32442835
       arbol2_04: 1758199978
@@ -3066,12 +3412,14 @@ TextureImporter:
       corral_08: 628608113
       sembrar: 1499248309
       agtierra_27: 1600039208
+      rock_03: 126544284
       agonda_05: 1565109086
       farolnegro_05: -45491744
       maceta_01: 1050926944
       plaza_08: 386089370
       bancoplaza_02: -1827324812
       agtierra_14: -1877841291
+      espanta_01: -1611030551
       flor_04: -785726535
       poste_05: -1374781209
       poste_03: -1200744604
@@ -3079,9 +3427,11 @@ TextureImporter:
       tierra_03: -1722392495
       agtierra_07: -154812755
       arbol2_03: 1526441557
+      espanta_02: 1744984912
       porton_01: 1759223427
       arbol1_04: 521395754
       bancoplaza_01: -1345276962
+      piedrita_04: 1968335858
       florazul_04: -1429352155
       arbol2_01: -466842706
       porton_03: 1912715334
@@ -3097,6 +3447,7 @@ TextureImporter:
       agtierra_23: 1368034384
       agtierra_08: -715301193
       flor_02: 2007108115
+      muelle_03: -166465258
       porton_02: 1022814606
       plaza_10: 1824210363
       agtierra_09: 248103676
