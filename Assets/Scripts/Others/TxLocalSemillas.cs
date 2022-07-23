@@ -10,8 +10,9 @@ public class TxLocalSemillas : Collidable
     {
         if(coll.name == "Player" )
         {
-            //Nos vamos al local de semillas
-            //Cargamos la scene
+            //Guardo el estado actual antes de irme al local de semillas            
+            GameManager.instance.SaveState();
+            ////Nos vamos al local de semilla, Cargamos la scene
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
         }
     }

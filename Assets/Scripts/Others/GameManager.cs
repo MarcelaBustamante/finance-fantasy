@@ -1,16 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     // Este script es el encargado de guardar el estado del jugador y muchas cosas mas
 
-    // Se puede obtener la 
     public static GameManager instance;
     private void Awake()
     {
+        if(GameManager.instance!=null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         instance = this;
+        // SceneLoaded es un evento que dispara el SceneManager un vez que se carga la escena.
+        // Scene manager va a ir por todas las funciones que hay en LoadState y las va a correr.
+        SceneManager.sceneLoaded += LoadState;
+        //Hace que el no se destruya el game manager a medida que cambio de scene
         DontDestroyOnLoad(gameObject);
     }
 
@@ -46,8 +56,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("save state");
     }
 
-    public void LoadState()
+    public void LoadState(Scene s, LoadSceneMode mode)
     {
+
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
         //Agarra el string de SaveState y lo esplitea metiendolo en el array cargando el estado
