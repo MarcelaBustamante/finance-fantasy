@@ -7,9 +7,6 @@ public class Player : MonoBehaviour
     private BoxCollider2D BoxCollider;//información del exterior
     private Vector3 moveDelta; // basicamente es para ir moviendo al muñeco. Donde estoy y donde lo voy a mandar
     private RaycastHit2D hit;
-    private RaycastHit2D hitX;
-    private RaycastHit2D hitY;
-    public float speed;
     public Animator animator;
 
     private void Start()
@@ -25,14 +22,8 @@ public class Player : MonoBehaviour
         // Reset moveDelta - Esto se reinicia por cada frame
         moveDelta = new Vector3(x,y,0);
         AnimateMovement(moveDelta);
-        //Swap sprite direction, wether you're going right or left
-        //if(moveDelta.x > 0)
-        //    transform.localScale = Vector3.one;
-        //    else if (moveDelta.x < 0)
-        //        transform.localScale = new Vector3(-1, 1, 1);
-
         //si queremos incluir las diagonales.
-        MoveIn8Directions();
+        MoveIn4Directions();
     }
 
     private void MoveIn4Directions()
@@ -51,11 +42,6 @@ public class Player : MonoBehaviour
             //Hace que se mueve
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
-    }
-
-    private void MoveIn8Directions()
-    {
-        transform.position += moveDelta * speed * Time.deltaTime;
     }
 
     void AnimateMovement(Vector3 direction)
