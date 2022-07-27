@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public List<int> xpTable;
 
     //Referencias
-    public player player;
+    public Player player;
 
     //Logic
     public int pesos;
