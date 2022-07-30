@@ -45,14 +45,12 @@ public class AIMovement : MonoBehaviour
         {
             if (direction.magnitude > 0)
             {
-                Debug.Log("True");
                 //animator.SetBool("isMoving", true);
                 //animator.SetFloat("horizontal", direction.x);
                 //animator.SetFloat("vertical", direction.y);
             }
             else
             {
-                Debug.Log("False");
                 //animator.SetBool("isMoving", false);
             }
         }
@@ -71,7 +69,6 @@ public class AIMovement : MonoBehaviour
         while (i < 2.0f )
         {
             i += Time.deltaTime * rate;
-            Debug.Log(i);
             // Make sure we can move in this direction, by casting a box first, if the box return null, we are free to move
             hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Animal", "Blocking"));
             if (hit.collider != null)
