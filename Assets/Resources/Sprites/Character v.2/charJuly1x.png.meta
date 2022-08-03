@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,6 +106,18 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -11307,10 +11319,10 @@ TextureImporter:
       charJuly1x_320: 966154136
       charJuly1x_88: -1176623545
       charJuly1x_199: -672075225
-      charJuly1x_177: 59414846
+      charJuly1x_388: -1062809562
       charJuly1x_47: -1179287205
       charJuly1x_494: 1910599355
-      charJuly1x_388: -1062809562
+      charJuly1x_177: 59414846
       charJuly1x_421: 13719167
       charJuly1x_86: 764912934
       charJuly1x_175: 1588228359
@@ -11335,12 +11347,12 @@ TextureImporter:
       charJuly1x_509: -2120635699
       charJuly1x_206: 1526110733
       charJuly1x_154: 1440180145
-      charJuly1x_528: 1238619021
+      charJuly1x_191: 411053829
       charJuly1x_379: -442447749
       charJuly1x_454: 1616740526
-      charJuly1x_92: 1468029874
+      charJuly1x_528: 1238619021
       charJuly1x_502: -525951490
-      charJuly1x_191: 411053829
+      charJuly1x_92: 1468029874
       charJuly1x_32: 2126053530
       charJuly1x_264: 892048752
       charJuly1x_329: -182023158
@@ -11422,8 +11434,8 @@ TextureImporter:
       charJuly1x_33: 980093117
       charJuly1x_426: 1859813397
       charJuly1x_55: -482079174
-      charJuly1x_260: 1962341103
       charJuly1x_266: 1268202698
+      charJuly1x_260: 1962341103
       charJuly1x_219: 1603687133
       charJuly1x_141: 1469113906
       charJuly1x_373: 1703445669
@@ -11801,13 +11813,13 @@ TextureImporter:
       charJuly1x_326: -1739259380
       charJuly1x_436: -1140353227
       charJuly1x_187: -1656205714
-      charJuly1x_5: 1927986967
-      charJuly1x_129: -1099586771
+      charJuly1x_295: 1640524464
       charJuly1x_457: -1561349457
+      charJuly1x_129: -1099586771
       charJuly1x_267: -484863478
       charJuly1x_501: -1942769762
       charJuly1x_503: -92615623
-      charJuly1x_295: 1640524464
+      charJuly1x_5: 1927986967
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81359,18 +81359,18 @@ TextureImporter:
       buildings_1855: 631150624
       buildings_173: 439709268
       buildings_254: -1833247610
-      buildings_1325: -261357758
-      buildings_2436: 469847443
       buildings_1000: 1549726576
+      buildings_1325: -261357758
+      buildings_2694: 1290376449
       buildings_2247: 1337082045
       buildings_2643: -2050861323
-      buildings_2694: 1290376449
+      buildings_2436: 469847443
       buildings_2005: -1715027258
       buildings_245: 549039340
       buildings_1350: 1652359977
       buildings_854: -140928093
-      buildings_1866: 1317876477
       buildings_1656: 1649976122
+      buildings_1866: 1317876477
       buildings_15: -510119715
       buildings_3062: 1079298155
       buildings_3381: 3980148
@@ -81555,21 +81555,21 @@ TextureImporter:
       buildings_3409: -387214334
       buildings_1281: -47518591
       buildings_1693: 247209280
-      buildings_2342: -1452194613
       mercado_01: 521287391
-      buildings_3848: 1534910013
+      buildings_2342: -1452194613
       buildings_513: 303016802
       buildings_3665: 864322776
       buildings_1751: -499978869
-      buildings_3783: 195200033
       buildings_2079: 1408333910
-      buildings_2758: 1097417476
       buildings_2601: 1453042569
+      buildings_2758: 1097417476
+      buildings_3848: 1534910013
       buildings_3625: 434221561
       buildings_3486: -2087533514
       buildings_3297: 1123494241
-      buildings_3502: 160917527
+      buildings_3783: 195200033
       buildings_3786: -1743015069
+      buildings_3502: 160917527
       buildings_1823: 1853569319
       buildings_378: 1713120750
       buildings_3858: 910498548
@@ -81886,12 +81886,12 @@ TextureImporter:
       buildings_810: 986753519
       buildings_860: 2126308176
       buildings_1932: -595347849
-      buildings_3206: -799525974
-      buildings_1319: -578397109
-      buildings_1733: -794671885
-      buildings_1418: -1690323661
-      buildings_2423: -1502697909
       buildings_1295: 797526229
+      buildings_1319: -578397109
+      buildings_3206: -799525974
+      buildings_1418: -1690323661
+      buildings_1733: -794671885
+      buildings_2423: -1502697909
       buildings_3240: -1789919161
       buildings_1040: 1040219403
       buildings_3505: 1424193950
@@ -81921,11 +81921,11 @@ TextureImporter:
       buildings_3468: -1013087936
       buildings_3197: 396323657
       buildings_299: 1396490493
-      buildings_1887: 661935680
       buildings_758: 913479004
+      buildings_1887: 661935680
       buildings_1722: -1008681440
-      buildings_1525: 1154673649
       buildings_2126: 1698152791
+      buildings_1525: 1154673649
       buildings_2959: 1148383534
       buildings_2077: -581396704
       buildings_359: 1553172498
@@ -82633,19 +82633,19 @@ TextureImporter:
       buildings_2556: -1139090651
       buildings_3076: 1518823896
       buildings_162: -1630093805
-      buildings_3157: -1796807774
       buildings_1803: -593515541
       buildings_2561: 416693706
+      buildings_3157: -1796807774
       buildings_2960: 2144382525
-      buildings_2611: -1218863780
+      buildings_3115: -1641422298
       buildings_898: 999009231
       buildings_2724: 192454544
+      buildings_2611: -1218863780
       buildings_1059: 655581724
       buildings_3440: -1723154358
       buildings_1053: -786640580
       buildings_3182: -1543401088
       buildings_793: -106505603
-      buildings_3115: -1641422298
       buildings_2086: -1109742302
       buildings_2856: 1975132588
       buildings_3487: 1807078375
@@ -83377,16 +83377,16 @@ TextureImporter:
       buildings_2883: 1586196356
       buildings_1020: 164501221
       buildings_528: 1456121311
-      buildings_1094: 742012048
       buildings_3064: -1441756872
-      buildings_3022: -1439198442
+      buildings_1094: 742012048
       buildings_3161: -1821892060
       buildings_2774: 1291222693
-      buildings_3706: 1530298658
+      buildings_3022: -1439198442
       buildings_369: 2021579442
       buildings_3279: -573072834
       buildings_3788: -1907531865
       buildings_3333: 171654708
+      buildings_3706: 1530298658
       buildings_1149: 1360476546
       buildings_2196: -1620478487
       buildings_1706: -583712447
@@ -83494,25 +83494,27 @@ TextureImporter:
       banco_03: 1655535459
       buildings_438: -484127374
       buildings_1147: 416199371
-      buildings_3290: 36799901
+      buildings_841: -2042668214
       buildings_3229: -396214194
       buildings_1774: -1951844454
+      buildings_3290: 36799901
       buildings_940: 1708720712
       buildings_2951: 1556000974
       buildings_2739: -955196482
       buildings_329: 1057590736
-      buildings_691: -99682465
-      buildings_841: -2042668214
-      buildings_3209: -289203152
-      buildings_1623: -186113700
       buildings_306: -1336467079
+      buildings_691: -99682465
+      buildings_1623: -186113700
+      buildings_3209: -289203152
+      buildings_2055: 1715734282
       buildings_1317: 316021512
       buildings_409: -674218018
       buildings_3033: -1183385079
-      buildings_1355: 1729473514
+      buildings_3511: -684490173
       buildings_2311: -76598232
       buildings_1806: -1825386051
-      buildings_3511: -684490173
+      buildings_1355: 1729473514
+      buildings_2112: -186680861
       buildings_3584: -1012710158
       buildings_2821: -867305286
       buildings_2554: 855335795
@@ -83523,13 +83525,12 @@ TextureImporter:
       buildings_2580: -1892618414
       buildings_916: -1275667098
       buildings_1364: 1766080563
-      buildings_2055: 1715734282
+      buildings_3088: -1799730342
       banco_42: -308791406
       buildings_2399: 2018425950
       buildings_3424: 1191508158
       buildings_1268: -1673829419
       gallinero_06: 144630428
-      buildings_2112: -186680861
       buildings_39: -1994903842
       buildings_1879: 1296336519
       buildings_2235: 270662387
@@ -83579,7 +83580,6 @@ TextureImporter:
       buildings_2475: -853304817
       banco_30: -542494516
       buildings_3817: 1395462024
-      buildings_3088: -1799730342
       buildings_3285: 639698114
       buildings_404: 867099406
       buildings_629: 843178941
@@ -83671,10 +83671,10 @@ TextureImporter:
       buildings_1184: 1231291673
       buildings_1034: 139595901
       buildings_2417: -1339045436
-      buildings_1338: -545004476
       buildings_1248: 1456777794
-      buildings_3105: 454740720
+      buildings_1338: -545004476
       buildings_3207: -328152600
+      buildings_3105: 454740720
       buildings_31: -994609413
       buildings_1372: 2034983446
       buildings_1886: 2125717209
@@ -83717,15 +83717,15 @@ TextureImporter:
       buildings_425: 1204690803
       buildings_3784: -2039024337
       buildings_1957: -592648082
-      buildings_2105: -1197817597
       mercado_13: 1054360935
       buildings_1707: -1142720295
       buildings_2785: 1926415785
       mercado_23: -380981377
       buildings_3844: 1386157260
-      buildings_3151: -457659451
+      buildings_2105: -1197817597
       buildings_2252: 418473143
       buildings_3337: -1891770567
+      buildings_3151: -457659451
       buildings_1737: -129010780
       buildings_3283: -272760516
       buildings_2854: 1806462500
@@ -83799,11 +83799,11 @@ TextureImporter:
       buildings_3048: -1200213934
       buildings_2620: -2130877679
       buildings_1537: 823942275
-      buildings_3125: -1421623734
+      buildings_3778: -360800346
       buildings_2838: -401708877
       buildings_3431: -1928256636
       buildings_3467: 1439359734
-      buildings_3778: -360800346
+      buildings_3125: -1421623734
       buildings_2233: 203716875
       buildings_1900: -1288449378
       buildings_1809: -2078329429
@@ -83849,16 +83849,16 @@ TextureImporter:
       buildings_194: 1437244504
       buildings_1923: 1914815183
       buildings_1569: 389925388
-      buildings_700: 1672149171
       buildings_3642: -702000455
-      buildings_1386: 671172562
+      buildings_700: 1672149171
       buildings_609: -1946534983
       buildings_2592: -1294557464
       buildings_1155: 667916427
       buildings_1531: -109481830
-      buildings_2223: -1005360566
+      buildings_1386: 671172562
       buildings_421: 1444033104
       buildings_2680: 624564994
+      buildings_2223: -1005360566
       buildings_3469: 674795175
       buildings_1568: -1303880471
       buildings_1648: -896198448
