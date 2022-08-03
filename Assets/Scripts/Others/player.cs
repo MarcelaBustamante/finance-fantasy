@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         BoxCollider = GetComponent<BoxCollider2D>();//es el boxcolider del muñeco
-       
+
     }
 
     private void Update()//
@@ -27,10 +27,29 @@ public class Player : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         // Reset moveDelta - Esto se reinicia por cada frame
-        moveDelta = new Vector3(x,y,0);
+        moveDelta = new Vector3(x, y, 0);
         AnimateMovement(moveDelta);
         //si queremos incluir las diagonales.
         MoveIn4Directions();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Vector3Int position = new((int)transform.position.x,(int)transform.position.y, 0);
+            Vector3Int position = new Vector3Int(
+                 Mathf.RoundToInt(transform.position.x),
+                 Mathf.RoundToInt(transform.position.y),
+                 0);
+
+            Debug.Log(GameManager.instance.tileManager.TileName(position));
+            if (GameManager.instance.tileManager.IsInteractable(position))
+            {
+                Debug.Log("es interactivo");
+
+                GameManager.instance.tileManager.SetInteracted(position);
+
+            }
+
+        }
     }
 
     private void MoveIn4Directions()
@@ -40,14 +59,14 @@ public class Player : MonoBehaviour
         if (hit.collider == null)
         {
             //Hace que se mueve
-            transform.Translate(0, moveDelta.y * Time.deltaTime, 0);
+            transform.Translate(0, moveDelta.y * 4 * Time.deltaTime, 0);
         }
 
         hit = Physics2D.BoxCast(transform.position, BoxCollider.size, 0, new Vector2(moveDelta.x, 0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider == null)
         {
             //Hace que se mueve
-            transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
+            transform.Translate(moveDelta.x * 4 * Time.deltaTime, 0, 0);
         }
     }
 

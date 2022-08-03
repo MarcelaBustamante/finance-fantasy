@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -3977,9 +3977,9 @@ TextureImporter:
       arbol_05: 1540830141
       rock_01: 1767913929
       barro_02: -258772669
-      agtierra_21: 1627637745
       agtierra_12: 2013428974
       tiles_23: 1895178991
+      agtierra_21: 1627637745
       tiles_12: -112153915
       piedrita_01: -2070703262
       arbol1_02: 797077161
