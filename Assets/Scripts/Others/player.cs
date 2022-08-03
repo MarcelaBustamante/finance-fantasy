@@ -8,6 +8,13 @@ public class Player : MonoBehaviour
     private Vector3 moveDelta; // basicamente es para ir moviendo al muñeco. Donde estoy y donde lo voy a mandar
     private RaycastHit2D hit;
     public Animator animator;
+    public Inventory inventory;
+
+    private void Awake()
+    {
+        inventory = new Inventory(21);
+    }
+
 
     private void Start()
     {
