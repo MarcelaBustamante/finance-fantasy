@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         LoadData();
         //Hace que el no se destruya el game manager a medida que cambio de scene
         DontDestroyOnLoad(gameObject);
-        
+        tileManager = GetComponent<TileManager>();
     }
 
     // Recursos
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     //Referencias
     public Player player;
-
+    public TileManager tileManager;
     public FloatingTextManager floatingTextManager;
     //Logic
     public int pesos;
