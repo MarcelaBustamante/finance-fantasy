@@ -7,7 +7,7 @@ public class Inventory_UI : MonoBehaviour
     public GameObject inventoryPannel;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             ToggleInventory();
         }
