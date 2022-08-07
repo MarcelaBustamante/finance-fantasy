@@ -7,6 +7,7 @@ public class Collectable : Collidable
     protected bool collected;
 
     public CollectableType type;
+    public Sprite icon;
     protected override void onCollide(Collider2D coll)
     {
         if(coll.name == "Player")
@@ -23,7 +24,7 @@ public class Collectable : Collidable
         Player player = collision.GetComponent<Player>();
         if (player)
         {
-            player.inventory.Add(type);
+            player.inventory.Add(this);
             Destroy(this.gameObject);
         }
     }
