@@ -8,6 +8,7 @@ public class Slot_UI : MonoBehaviour
 {
     public Image itemIcon;
     public TextMeshProUGUI quantityText;
+    public bool isEmpty = true;
 
     public void SetItem(Inventory.Slot slot)
     {
@@ -16,6 +17,7 @@ public class Slot_UI : MonoBehaviour
             itemIcon.sprite = slot.icon;
             itemIcon.color = new Color(1, 1, 1, 1);
             quantityText.text = slot.count.ToString();
+            isEmpty = false;
         }
     }
 
@@ -24,5 +26,6 @@ public class Slot_UI : MonoBehaviour
         itemIcon.sprite = null;
         itemIcon.color = new Color(1, 1, 1, 0);
         quantityText.text = "";
+        isEmpty = true;
     }
 }

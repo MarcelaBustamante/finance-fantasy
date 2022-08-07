@@ -204,9 +204,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 225
-        y: 289
-        width: 16
-        height: 14
+        y: 288
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: farm
       rect:
         serializedVersion: 2
-        x: 112
-        y: 286
-        width: 17
-        height: 19
+        x: 113
+        y: 288
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,7 +271,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -279,6 +279,48 @@ TextureImporter:
       bones: []
       spriteID: 6d8c52f79dabf7d4b854df0fcbf3dc26
       internalID: -930475604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: x
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 5
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b27865049be69c4aa76ba09bda03bb0
+      internalID: -1316348430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Delete
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 432
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25e665ab9f646847b794bd221a81b7d
+      internalID: 2141380308
       vertices: []
       indices: 
       edges: []
@@ -300,6 +342,8 @@ TextureImporter:
       close: 1470907565
       UI_all 1_0: -930475604
       farm: -931348062
+      Delete: 2141380308
+      x: -1316348430
       inventorytab: -206024850
       budget: -1146098676
   spritePackingTag: 

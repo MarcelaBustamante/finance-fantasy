@@ -5,14 +5,17 @@ using UnityEngine;
 public class Inventory_UI : MonoBehaviour
 {
     public GameObject inventoryPannel;
+    public GameObject removeItem;
     public Player player;
     public List<Slot_UI> slots = new List<Slot_UI>();
+    private int itemSelected = -1;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             ToggleInventory();
         }
+        Refresh();
     }
 
     public void ToggleInventory()
@@ -20,28 +23,64 @@ public class Inventory_UI : MonoBehaviour
         if (!inventoryPannel.activeSelf)
         {
             inventoryPannel.SetActive(true);
-            Setup();        }
+            //Refresh();       
+        }
         else
         {
             inventoryPannel.SetActive(false);
         }
     }
 
-    void Setup()
+
+    void Refresh()
     {
-        if(slots.Count == player.inventory.slots.Count)
-        {
+        //if(slots.Count == player.inventory.slots.Count)
+        //{
             for( int i = 0; i < slots.Count; i++)
             {
-                if(player.inventory.slots[i].type != CollectableType.NONE)
+                if (slots[i])
                 {
-                    slots[i].SetItem(player.inventory.slots[i]);
-                }
-                else
-                {
-                    slots[i].SetEmpty();
+                    if (player.inventory.slots[i].type != CollectableType.NONE)
+                    {
+                        slots[i].SetItem(player.inventory.slots[i]);
+                    }
+                    else
+                    {
+                        slots[i].SetEmpty();
+                    }
                 }
             }
+        // }
+    }
+
+    public void SelectItem(int slotID)
+    {
+        if (slots[slotID].isEmpty) return;
+        if (itemSelected == slotID)
+        {
+            disableTrash();
         }
+        else
+        {
+            itemSelected = slotID;
+            removeItem.SetActive(true);
+        }
+
+    }
+
+    public void Remove()
+    {
+        if (itemSelected != -1)
+        {
+            player.inventory.Remove(itemSelected);
+            disableTrash();
+        }
+        //Refresh();
+    }
+
+    private void disableTrash()
+    {
+        itemSelected = -1;
+        removeItem.SetActive(false);
     }
 }
