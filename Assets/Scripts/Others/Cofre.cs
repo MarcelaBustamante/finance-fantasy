@@ -17,7 +17,7 @@ public class Cofre : Collectable
             collected = true;
             //Aca lo que hago es cambiar el sprit del cofre
             GetComponent<SpriteRenderer>().sprite = cofreVacio;
-            GameManager.instance.ShowText("+" + pesosAmount + "Monedas",50,Color.yellow,transform.position,Vector3.up * 50,1.0f);
+            GameManager.instance.ShowText("+" + pesosAmount + " Monedas",50,Color.yellow,transform.position,Vector3.up * 50,1.0f);
             GameManager.instance.pesos = GameManager.instance.pesos + pesosAmount;
             Debug.Log(GameManager.instance.pesos);
         }

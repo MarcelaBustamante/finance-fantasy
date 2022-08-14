@@ -14,6 +14,7 @@ public class TxLocalSemillas : Collidable
             GameManager.instance.SaveState();
             ////Nos vamos al local de semilla, Cargamos la scene
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+         
         }
     }
 }
