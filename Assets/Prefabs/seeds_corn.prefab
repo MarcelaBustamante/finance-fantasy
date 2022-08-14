@@ -114,6 +114,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   type: 4
   icon: {fileID: 1820899354, guid: ada4b1695790b4b789b4329b3520330f, type: 3}
+  price: 50
 --- !u!61 &3879068219065668937
 BoxCollider2D:
   m_ObjectHideFlags: 0

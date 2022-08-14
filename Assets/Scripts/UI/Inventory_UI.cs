@@ -70,17 +70,19 @@ public class Inventory_UI : MonoBehaviour
 
     public void Remove()
     {
-        if (itemSelected != -1)
+        Collectable itemToDrop = GameManager.instance.itemManager.GetItemByType(
+            player.inventory.slots[itemSelected].type);
+        if (itemSelected != -1 && itemToDrop != null)
         {
             player.inventory.Remove(itemSelected);
             disableTrash();
         }
-        //Refresh();
     }
 
     private void disableTrash()
     {
         itemSelected = -1;
         removeItem.SetActive(false);
+
     }
 }

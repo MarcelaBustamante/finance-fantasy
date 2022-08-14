@@ -8,12 +8,13 @@ public class GameManager : MonoBehaviour
     // Este script es el encargado de guardar el estado del jugador y muchas cosas mas
 
     public static GameManager instance;
+    public ItemManager itemManager;
 
     private void Awake()
     {
-        if (GameManager.instance != null)
+        if (instance != null && instance != this )
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
             return;
         }
 
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
         //Hace que el no se destruya el game manager a medida que cambio de scene
         DontDestroyOnLoad(gameObject);
         tileManager = GetComponent<TileManager>();
+        itemManager = GetComponent<ItemManager>();
     }
 
     // Recursos

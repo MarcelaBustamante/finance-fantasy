@@ -749,10 +749,10 @@ TextureImporter:
       name: seeds_30
       rect:
         serializedVersion: 2
-        x: 19
-        y: 65
-        width: 11
-        height: 14
+        x: 18
+        y: 64
+        width: 12
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -777,8 +777,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      seeds_1: 1996909155
       seeds_16: 1801275856
-      seeds_23: -637981590
       seeds_19: -1870631379
       seeds_0: -920530442
       seeds_22: -646757732
@@ -805,9 +805,9 @@ TextureImporter:
       seeds_17: 1628373428
       seeds_25: -1812785819
       seeds_13: -1991488093
-      seeds_12: -412289015
       seeds_21: -2091647419
-      seeds_1: 1996909155
+      seeds_23: -637981590
+      seeds_12: -412289015
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

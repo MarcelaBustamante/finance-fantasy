@@ -12,6 +12,7 @@ public class Inventory
     {
         public CollectableType type;
         public int count;
+        public int price;
         public int maxAllowed;
 
         public Sprite icon;
@@ -20,6 +21,7 @@ public class Inventory
         {
             type = CollectableType.NONE;
             count = 0;
+            price = 10;
             maxAllowed = 99;
         }
 
