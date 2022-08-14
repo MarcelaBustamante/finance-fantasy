@@ -9,10 +9,11 @@ public class Player : MonoBehaviour
     private RaycastHit2D hit;
     public Animator animator;
     public Inventory inventory;
+    public Joystick joystick;
 
     private void Awake()
     {
-        inventory = new Inventory(21);
+        inventory = new Inventory(27);
     }
 
 
@@ -26,6 +27,11 @@ public class Player : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+        if (joystick)
+        {
+            x = joystick.Horizontal;
+            y = joystick.Vertical;
+        }
         // Reset moveDelta - Esto se reinicia por cada frame
         moveDelta = new Vector3(x, y, 0);
         AnimateMovement(moveDelta);

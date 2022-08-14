@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Event
   layers:
   - Default
   - TransparentFX
@@ -52,4 +53,7 @@ TagManager:
     locked: 0
   - name: Animal
     uniqueID: 1430572601
+    locked: 0
+  - name: PopUp
+    uniqueID: 18784637
     locked: 0

@@ -12,12 +12,16 @@ public class Inventory
     {
         public CollectableType type;
         public int count;
+        public int price;
         public int maxAllowed;
+
+        public Sprite icon;
         
         public Slot()
         {
             type = CollectableType.NONE;
             count = 0;
+            price = 10;
             maxAllowed = 99;
         }
 
@@ -30,13 +34,29 @@ public class Inventory
 
             return false;  
         }
-        public void AddItem(CollectableType type)
+        public void AddItem(Collectable item)
         {
-            this.type = type;
+            this.type = item.type;
+            this.icon = item.icon;
             count++;
         }
+
+        public void RemoveItem()
+        {
+            if (count > 0)
+            {
+                count--;
+                if(count == 0)
+                {
+                    icon = null;
+                    type = CollectableType.NONE;
+                }
+            }
+        }
+
     }
 
+    
     public List<Slot> slots = new List<Slot>();
 
     public Inventory(int numSlots)
@@ -48,20 +68,30 @@ public class Inventory
         }
     }
 
-    public void Add(CollectableType typeToAdd)
+    public void Add(Collectable item)
     {
         foreach(Slot slot in slots)
         {
-            if(slot.type == typeToAdd && slot.CanAddItem())
+            if(slot.type == item.type && slot.CanAddItem())
             {
-                slot.AddItem(typeToAdd);
+                slot.AddItem(item);
                 return;
             }
         }
 
         foreach(Slot slot in slots)
         {
-            slot.AddItem(typeToAdd);
+            if(slot.type == CollectableType.NONE)
+            {
+                slot.AddItem(item);
+                return;
+            }
+            
         }
+    }
+
+    public void Remove(int index)
+    {
+        slots[index].RemoveItem();
     }
 }
