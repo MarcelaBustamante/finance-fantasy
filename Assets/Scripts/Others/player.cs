@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
     private void Update()//
     {
+        
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         if (joystick)
@@ -38,24 +39,6 @@ public class Player : MonoBehaviour
         //si queremos incluir las diagonales.
         MoveIn4Directions();
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //Vector3Int position = new((int)transform.position.x,(int)transform.position.y, 0);
-            Vector3Int position = new Vector3Int(
-                 Mathf.RoundToInt(transform.position.x),
-                 Mathf.RoundToInt(transform.position.y),
-                 0);
-
-            Debug.Log(GameManager.instance.tileManager.TileName(position));
-            if (GameManager.instance.tileManager.IsInteractable(position))
-            {
-                Debug.Log("es interactivo");
-
-                GameManager.instance.tileManager.SetInteracted(position);
-
-            }
-
-        }
     }
 
     private void MoveIn4Directions()
@@ -92,4 +75,11 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Debug.Log("El palyer en colsion");
+        //animator.SetBool("Cosechar", true);
+    }
+
 }

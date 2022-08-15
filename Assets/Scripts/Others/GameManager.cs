@@ -8,15 +8,17 @@ public class GameManager : MonoBehaviour
     // Este script es el encargado de guardar el estado del jugador y muchas cosas mas
 
     public static GameManager instance;
-    public ItemManager itemManager;
 
     private void Awake()
     {
-        if (instance != null && instance != this )
+        if (GameManager.instance != null)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return;
         }
+
+
+        PlayerPrefs.DeleteAll();// Esto me borra todo lo que tengo en el player. Lo puse por que me tiraba error al agregar los int de semillas.
 
         instance = this;
         // SceneLoaded es un evento que dispara el SceneManager un vez que se carga la escena.
@@ -25,8 +27,6 @@ public class GameManager : MonoBehaviour
         LoadData();
         //Hace que el no se destruya el game manager a medida que cambio de scene
         DontDestroyOnLoad(gameObject);
-        tileManager = GetComponent<TileManager>();
-        itemManager = GetComponent<ItemManager>();
     }
 
     // Recursos
@@ -39,9 +39,19 @@ public class GameManager : MonoBehaviour
     public Player player;
     public TileManager tileManager;
     public FloatingTextManager floatingTextManager;
+    public PlotManager plotManager;
+    public PlantInstantiation plantInstantiation;
+
     //Logic
     public int pesos;
-    public int manazana;
+    public int choclo;
+    public int tomate;
+    public int zanahoria;
+    public int lechuga;
+    public int zapallo;
+    public int stomate;
+    public int szana;
+
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -57,18 +67,27 @@ public class GameManager : MonoBehaviour
      */
     public void SaveState()
     {
+        // String vacio donde ire guardando la informacion del inventario
         string s = " ";
 
 
         s += pesos.ToString() + "|";
-        s += manazana.ToString() + "|";
-        s += "0" + "|";
+        s += choclo.ToString() + "|";
+        s += tomate.ToString() + "|";
+        s += zanahoria.ToString() + "|";
+        s += lechuga.ToString() + "|";
+        s += zapallo.ToString() + "|";
+        s += stomate.ToString() + "|";
+        s += szana.ToString(); //No olvidar que el ultimo no lleva el pipe
+
+
+        //s += "0";
         //PlayerPrefs guarda en memoria un string llamado SaveState con el contenido de mi 
         PlayerPrefs.SetString("SaveState", s);
         Debug.Log("Save state");
         Debug.Log(s);
 
-        //PlayerPrefs.SetInt(plata, pesos);
+        //PlayerPrefs.SetInt(plata, 1);
         //Debug.Log(plata);
     }
 
@@ -84,8 +103,10 @@ public class GameManager : MonoBehaviour
 
         //Cargo la plata
         pesos = int.Parse(data[1]); 
-        manazana = int.Parse(data[2]);
-        
+        choclo = int.Parse(data[2]);
+        stomate = int.Parse(data[3]);
+        //SemZanahoria = int.Parse(data[4]);
+
         //Cambio la herramienta.
         Debug.Log("update state");
         Debug.Log(pesos);
@@ -94,17 +115,30 @@ public class GameManager : MonoBehaviour
 
     public void LoadData()
     {
+        if (!PlayerPrefs.HasKey("SaveState"))
+        {
+            Debug.Log("no tengo SaveState");
+            return;
+        }
+            
+
         //pesos = PlayerPrefs.GetInt(plata, 0);
         //Agarra el string de SaveState y lo esplitea metiendolo en el array cargando el estado
         string[] data = PlayerPrefs.GetString("SaveState").Split('|');
 
         //Cargo la plata
         pesos = int.Parse(data[1]);
-        manazana = int.Parse(data[2]);
+        choclo = int.Parse(data[2]);
+        tomate = int.Parse(data[3]);
+        zanahoria = int.Parse(data[4]);
+        lechuga = int.Parse(data[5]);
+        zapallo = int.Parse(data[6]);
+        stomate = int.Parse(data[7]);
+        szana = int.Parse(data[8]);
+
 
         //Cambio la herramienta.
-        Debug.Log("update state");
-        Debug.Log(pesos);
+        Debug.Log(data);
 
     }
 }

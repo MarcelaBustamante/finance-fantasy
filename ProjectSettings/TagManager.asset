@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Cosecha
   - Water
   - UI
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: Floor
     uniqueID: 2154861989
+    locked: 0
+  - name: Cosecha
+    uniqueID: 1344498243
     locked: 0
   - name: Actor
     uniqueID: 2324639251
