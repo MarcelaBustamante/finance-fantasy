@@ -26,7 +26,7 @@ public class PlantInstantiation : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
+            Debug.Log("Entro con Space");
 
             Vector3Int position = new Vector3Int(
                  Mathf.RoundToInt(transform.position.x),

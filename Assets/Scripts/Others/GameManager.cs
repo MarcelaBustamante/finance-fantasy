@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     // Este script es el encargado de guardar el estado del jugador y muchas cosas mas
 
     public static GameManager instance;
+    public ItemManager itemManager;
 
     private void Awake()
     {
