@@ -10,15 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<<< HEAD:Assets/Resources/Levels/Tiles/boxes_30.asset
-  m_Name: boxes_30
-  m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -2006136550, guid: 16e7e7dbdd7c54994a93eb3d0df28c2c, type: 3}
-========
   m_Name: Choclo
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: -1480620319, guid: 8822169391a1a4b66a56aa9e401bbb70, type: 3}
->>>>>>>> develop:Assets/Resources/Levels/Tiles/Choclo.asset
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
