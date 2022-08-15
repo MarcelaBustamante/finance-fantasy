@@ -18,7 +18,7 @@ public class Collidable : MonoBehaviour
 
     }
 
-    protected virtual void Update()
+    protected virtual void  Update()
     {
         //Collision work, basicamente lo que hace es fijarse si estoy teniendo una colision con un collider y lo mete dentro del array de hits
         boxCollider.OverlapCollider(filter, hits);
@@ -40,5 +40,6 @@ public class Collidable : MonoBehaviour
     {
         Debug.Log(coll.name);
     }
+
 }
 

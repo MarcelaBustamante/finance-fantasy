@@ -16340,7 +16340,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: buildings_772
+      name: cartel
       rect:
         serializedVersion: 2
         x: 128
@@ -81535,8 +81535,8 @@ TextureImporter:
       buildings_1007: 775924206
       buildings_118: 935161499
       buildings_314: -889086943
-      buildings_1810: 1297225065
       buildings_3002: 216520706
+      buildings_1810: 1297225065
       buildings_211: 14783480
       buildings_1442: 1517748559
       buildings_585: 1930278994
@@ -82913,6 +82913,7 @@ TextureImporter:
       buildings_2290: 550459295
       buildings_3140: -1100579323
       buildings_3231: -2133460928
+      cartel: 866908096
       buildings_630: -1550085517
       buildings_798: 328629178
       buildings_1232: -511357365
@@ -83206,7 +83207,6 @@ TextureImporter:
       buildings_1795: 378868244
       buildings_2053: -128285282
       buildings_2820: -375373791
-      buildings_772: 866908096
       buildings_3311: 1112583727
       buildings_128: 388788298
       buildings_3130: 264550687
