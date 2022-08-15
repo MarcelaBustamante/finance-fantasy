@@ -69,10 +69,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7151041700102673147}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 004d5bf51665b4d42bd9c62225628729, type: 3}
+  m_Script: {fileID: 11500000, guid: a8e418e4765c8244a93c9ef898565b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7151041700295716911}
+  inventory:
+    slots: []
+  joystick: {fileID: 0}
 --- !u!1 &7151041700295716899
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +148,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1970328045
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1566769356, guid: c782e37c7b40f9e4785fc6cd9ab485e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
