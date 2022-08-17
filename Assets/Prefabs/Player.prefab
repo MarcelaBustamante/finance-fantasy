@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7151041700102673124}
   - component: {fileID: 7151041700102673127}
   - component: {fileID: 3912455351896339002}
+  - component: {fileID: 1807368338194976259}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -94,6 +95,27 @@ MonoBehaviour:
   lechuga: {fileID: 193493388710623842, guid: 2299fd3637ead478fbce9e4ab350f080, type: 3}
   tomate: {fileID: 193493388710623842, guid: 3befb7d085dfb4d2b8c52972dedd2fe3, type: 3}
   zapallo: {fileID: 193493388710623842, guid: 6df4938c1fe774423848a8f7619483b9, type: 3}
+--- !u!50 &1807368338194976259
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151041700102673147}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &7151041700295716899
 GameObject:
   m_ObjectHideFlags: 0
