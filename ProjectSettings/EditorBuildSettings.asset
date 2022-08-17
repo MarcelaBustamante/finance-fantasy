@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainLucas.unity
+    guid: f5ec3de541e83464fb357537fc11c02f
+  - enabled: 1
     path: Assets/Scenes/Local de semillas.unity
     guid: f246edbc151874afe91e2353c2c36429
   m_configObjects:
