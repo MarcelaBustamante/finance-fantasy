@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7151041700102673126}
   - component: {fileID: 7151041700102673124}
   - component: {fileID: 7151041700102673127}
+  - component: {fileID: 3912455351896339002}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +48,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0037230253, y: 0.09307632}
+  m_Offset: {x: -0.10949421, y: 0.61670613}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -58,7 +59,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12880588, y: 0.17348236}
+  m_Size: {x: 1.0005789, y: 1.220742}
   m_EdgeRadius: 0
 --- !u!114 &7151041700102673127
 MonoBehaviour:
@@ -76,6 +77,23 @@ MonoBehaviour:
   inventory:
     slots: []
   joystick: {fileID: 0}
+--- !u!114 &3912455351896339002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151041700102673147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6f80b3f8ca604c87bb1c74d3dd0e3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choclo: {fileID: 193493388710623842, guid: 493528ed6a352ba429208b95019189cd, type: 3}
+  zanahoria: {fileID: 193493388710623842, guid: cef92c2e3d19841e8a5a05a12ab5d417, type: 3}
+  lechuga: {fileID: 193493388710623842, guid: 2299fd3637ead478fbce9e4ab350f080, type: 3}
+  tomate: {fileID: 193493388710623842, guid: 3befb7d085dfb4d2b8c52972dedd2fe3, type: 3}
+  zapallo: {fileID: 193493388710623842, guid: 6df4938c1fe774423848a8f7619483b9, type: 3}
 --- !u!1 &7151041700295716899
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +105,7 @@ GameObject:
   - component: {fileID: 7151041700295716908}
   - component: {fileID: 7151041700295716910}
   - component: {fileID: 7151041700295716911}
+  - component: {fileID: 2855753062630932449}
   m_Layer: 9
   m_Name: Visuals
   m_TagString: Untagged
@@ -181,3 +200,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2855753062630932449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151041700295716899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156b20ec6a0e548c196710584085c493, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

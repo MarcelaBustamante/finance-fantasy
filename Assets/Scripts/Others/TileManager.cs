@@ -57,7 +57,7 @@ public class TileManager : MonoBehaviour
         {
             return tile.name;
         }
-        return tile.name;
+        return "";
     }
 
 

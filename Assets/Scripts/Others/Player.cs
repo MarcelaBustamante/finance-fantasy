@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         BoxCollider = GetComponent<BoxCollider2D>();//es el boxcolider del muñeco
-
+        
     }
 
     private void Update()//
@@ -74,6 +74,12 @@ public class Player : MonoBehaviour
                 animator.SetBool("isMoving", false);
             }
         }
+    }
+
+    public void endHoeAnimation2()
+    {
+        //animator.SetBool("Cosechar", false);
+        Debug.Log("Triger stop");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
