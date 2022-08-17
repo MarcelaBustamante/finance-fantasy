@@ -13,6 +13,7 @@ namespace FinanceFantasy {
       }
 
       Instance = this;
+      DontDestroyOnLoad(this);
     }
   }
 }

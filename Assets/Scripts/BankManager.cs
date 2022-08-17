@@ -7,9 +7,9 @@ using UnityEngine;
 namespace FinanceFantasy.Bank {
     public class BankManager : MonoSingleton {
         [SerializeField] private float LoanAmount = 1000f;
-        [Tooltip("Tiempo de pago para el prestamo. En HORAS!!")]
+        [Tooltip("Tiempo de pago para el prestamo por cuota. En Segundos!!")]
         [SerializeField] private int loanPaymentTimeInSeconds = 3600;
-        [Tooltip("Tiempo de pago para la tarjeta de credito. En HORAS!!")]
+        [Tooltip("Tiempo de pago para la tarjeta de credito. En Segundos!!")]
         [SerializeField] private int creditPaymentTimeInSeconds = 3600;
         private CreditCard _playerCurrentCard;
         private Loan _playerCurrentLoan;
@@ -19,19 +19,20 @@ namespace FinanceFantasy.Bank {
         // Used action because we don't need to return values, only notify some UI elements
         public static Action<BankOperation> SignUpWithBank;
         
-        private BankController _bankController;
+        private BankController _bankController = new BankController();
         private PlayerMoney _playerMoney;
 
         protected override void Awake() {
             base.Awake();
             
-            _bankController = new BankController();
+            //_bankController = new BankController();
             _playerMoney = FindObjectOfType<PlayerMoney>();
         }
 
         private void Update() {
             if (_playerCurrentCard != null) {
                 if (_playerCurrentCard.PaymentTime <= 0) {
+                    //GameManager.instance.TakeMoney(x);
                     _playerMoney.TakeMoney(_playerCurrentCard.MouthPayment);
                     _playerCurrentCard.ResetPayTime();
                 }
@@ -40,6 +41,7 @@ namespace FinanceFantasy.Bank {
             if (_playerCurrentLoan != null) {
                 if (_playerCurrentLoan.PaymentTime <= 0) {
                     _playerMoney.TakeMoney(_playerCurrentLoan.MonthlyInstallments);
+                    _playerCurrentLoan.ResetPayTime();
                     _playerCurrentLoan.PaidInstallments++;
                     if (_playerCurrentLoan.TotalInstallments == _playerCurrentLoan.PaidInstallments) {
                         _playerCurrentLoan = null;   
@@ -77,6 +79,7 @@ namespace FinanceFantasy.Bank {
             }
             
             var loan = _bankController.TakeLoan(LoanAmount, loanPaymentTimeInSeconds);
+            // GameManager.instance.GiveMoney(loan.LoanAmount);
             _playerMoney.GiveMoney(loan.LoanAmount);
             _playerCurrentLoan = loan;
             // Alert whoever we need to alert
