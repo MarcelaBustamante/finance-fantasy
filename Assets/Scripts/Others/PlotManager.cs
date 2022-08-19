@@ -76,26 +76,27 @@ public class PlotManager : Collectable
                     GameManager.instance.zapallo = GameManager.instance.zapallo + verduraCant;
                     break;
             }
-
             //Cantidad de semillas recibidas
-            GameManager.instance.ShowText("+ "+ verduraCant +" "+ verduraNombre, 50, Color.yellow, transform.position, Vector3.up * 50, 1.0f);
+            GameManager.instance.ShowText("+ " + verduraCant + " " + verduraNombre, 50, Color.yellow, transform.position, Vector3.up * 50, 1.0f);
             Destroy(object2Destroy);
         }
-    }
-
-    private void OnMouseDown()
-    {
-
-        if (isPlanted)
-        {
-            if (plantStage == plantStages.Length - 1)
-                Harvest();
-        }
-        else
-        {
+        else if (plantStage == 0)
             Plant();
-        }
     }
+
+    //private void OnMouseDown()
+    //{
+
+    //    if (isPlanted)
+    //    {
+    //        if (plantStage == plantStages.Length - 1)
+    //            Harvest();
+    //    }
+    //    else
+    //    {
+    //        Plant();
+    //    }
+    //}
 
     public void Harvest()
     {

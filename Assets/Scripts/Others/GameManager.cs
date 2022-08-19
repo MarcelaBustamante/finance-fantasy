@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviour
     public int zapallo;
     public int stomate;
     public int szana;
+    public int schoclo;
+    public int szapallo;
+    public int slechuga;
 
 
     // Floating text
@@ -79,7 +82,10 @@ public class GameManager : MonoBehaviour
         s += lechuga.ToString() + "|";
         s += zapallo.ToString() + "|";
         s += stomate.ToString() + "|";
-        s += szana.ToString(); //No olvidar que el ultimo no lleva el pipe
+        s += szana.ToString() + "|";
+        s += schoclo.ToString() + "|";
+        s += szapallo.ToString() + "|";
+        s += slechuga.ToString(); //No olvidar que el ultimo no lleva el pipe
 
 
         //s += "0";
@@ -136,6 +142,9 @@ public class GameManager : MonoBehaviour
         zapallo = int.Parse(data[6]);
         stomate = int.Parse(data[7]);
         szana = int.Parse(data[8]);
+        schoclo = int.Parse(data[9]);
+        szapallo = int.Parse(data[10]);
+        slechuga = int.Parse(data[11]);
 
 
         //Cambio la herramienta.
