@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public ItemManager itemManager;
+
 
     private void Awake()
     {
@@ -44,7 +46,7 @@ public class GameManager : MonoBehaviour
     public PlantInstantiation plantInstantiation;
 
     //Logic
-    public int pesos;
+    public float pesos;
     public int choclo;
     public int tomate;
     public int zanahoria;
@@ -56,6 +58,50 @@ public class GameManager : MonoBehaviour
     public int szapallo;
     public int slechuga;
 
+
+
+
+
+
+
+    //Cosas del script de fer
+    public static Action<float> PlayerMoneyChanged;
+    private float _currentMoney = 1000f;
+
+    public void TakeMoney(float quantity)
+    {
+        //if (_currentMoney < quantity)
+        //{
+        //    print($"Something is weird, the {quantity} is greater than current player's money = {_currentMoney}");
+        //    _currentMoney = 0;
+        //    return;
+        //}
+
+        //_currentMoney -= quantity;
+        //PlayerMoneyChanged?.Invoke(_currentMoney);
+
+        if(pesos < quantity)
+        {
+            print($"Something is weird, the {quantity} is greater than current player's money = {_currentMoney}");
+            pesos = 0;
+            return;
+        }
+
+        pesos -= quantity;
+        PlayerMoneyChanged?.Invoke(pesos);
+    }
+
+    public void GiveMoney(float quantity)
+    {
+        //_currentMoney += quantity;
+        //PlayerMoneyChanged?.Invoke(_currentMoney);
+
+        pesos += quantity;
+        PlayerMoneyChanged?.Invoke(pesos);
+    }
+
+
+    ///  Fin cosas script fer
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)

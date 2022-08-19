@@ -33,6 +33,7 @@ namespace FinanceFantasy.Bank {
             if (_playerCurrentCard != null) {
                 if (_playerCurrentCard.PaymentTime <= 0) {
                     //GameManager.instance.TakeMoney(x);
+                    GameManager.instance.TakeMoney(_playerCurrentCard.MouthPayment);
                     _playerMoney.TakeMoney(_playerCurrentCard.MouthPayment);
                     _playerCurrentCard.ResetPayTime();
                 }
@@ -40,6 +41,7 @@ namespace FinanceFantasy.Bank {
 
             if (_playerCurrentLoan != null) {
                 if (_playerCurrentLoan.PaymentTime <= 0) {
+                    GameManager.instance.TakeMoney(_playerCurrentLoan.MonthlyInstallments);
                     _playerMoney.TakeMoney(_playerCurrentLoan.MonthlyInstallments);
                     _playerCurrentLoan.ResetPayTime();
                     _playerCurrentLoan.PaidInstallments++;
@@ -80,6 +82,7 @@ namespace FinanceFantasy.Bank {
             
             var loan = _bankController.TakeLoan(LoanAmount, loanPaymentTimeInSeconds);
             // GameManager.instance.GiveMoney(loan.LoanAmount);
+            GameManager.instance.GiveMoney(loan.LoanAmount);
             _playerMoney.GiveMoney(loan.LoanAmount);
             _playerCurrentLoan = loan;
             // Alert whoever we need to alert
