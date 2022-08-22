@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using FinanceFantasy.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -196,5 +197,44 @@ public class GameManager : MonoBehaviour
         //Cambio la herramienta.
         Debug.Log(data);
 
+    }
+
+    public bool TryCompleteOrder(Order order) {
+        // Temporal
+        Dictionary<string, int> translator = new Dictionary<string, int> {
+            { "Choclo", choclo },
+            { "Zapallo", zapallo },
+            { "Tomate", tomate },
+            { "Lechuga", lechuga },
+            { "Zanahoria", zanahoria }
+        };
+
+        if (translator.TryGetValue(order.orderName, out var amount)) {
+            if (amount >= order.amount) {
+                GiveMoney(order.cost);
+                switch (order.orderName) {
+                    case "Choclo":
+                        choclo -= order.amount;
+                        break;
+                    case "Zapallo":
+                        zapallo -= order.amount;
+                        break;
+                    case "Tomate":
+                        tomate -= order.amount;
+                        break;
+                    case "Lechuga":
+                        lechuga -= order.amount;
+                        break;
+                    case "Zanahoria":
+                        zanahoria -= order.amount;
+                        break;
+                }
+
+                return true;
+            }
+        }
+        
+    
+        return false;
     }
 }
