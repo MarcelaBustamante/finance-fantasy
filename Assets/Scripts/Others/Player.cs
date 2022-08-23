@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;//Script fer
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,9 +12,36 @@ public class Player : MonoBehaviour
     public Inventory inventory;
     public Joystick joystick;
 
+    //Cosas del script de fer
+    public static Action<float> PlayerMoneyChanged;
+    private float _currentMoney = 1000f;
+
+    public void TakeMoney(float quantity)
+    {
+        if (_currentMoney < quantity)
+        {
+            print($"Something is weird, the {quantity} is greater than current player's money = {_currentMoney}");
+            _currentMoney = 0;
+            return;
+        }
+
+        _currentMoney -= quantity;
+        PlayerMoneyChanged?.Invoke(_currentMoney);
+    }
+
+    public void GiveMoney(float quantity)
+    {
+        _currentMoney += quantity;
+        PlayerMoneyChanged?.Invoke(_currentMoney);
+    }
+
+    
+    ///  Fin cosas script fer
+
     private void Awake()
     {
         inventory = new Inventory(27);
+        PlayerMoneyChanged?.Invoke(_currentMoney);//Script Fer
     }
 
 
@@ -75,17 +103,4 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-    public void endHoeAnimation2()
-    {
-        //animator.SetBool("Cosechar", false);
-        Debug.Log("Triger stop");
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //Debug.Log("El palyer en colsion");
-        //animator.SetBool("Cosechar", true);
-    }
-
 }

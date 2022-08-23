@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using FinanceFantasy.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -9,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public ItemManager itemManager;
+
 
     private void Awake()
     {
@@ -44,7 +47,7 @@ public class GameManager : MonoBehaviour
     public PlantInstantiation plantInstantiation;
 
     //Logic
-    public int pesos;
+    public float pesos;
     public int choclo;
     public int tomate;
     public int zanahoria;
@@ -52,7 +55,54 @@ public class GameManager : MonoBehaviour
     public int zapallo;
     public int stomate;
     public int szana;
+    public int schoclo;
+    public int szapallo;
+    public int slechuga;
 
+
+
+
+
+
+
+    //Cosas del script de fer
+    public static Action<float> PlayerMoneyChanged;
+    private float _currentMoney = 1000f;
+
+    public void TakeMoney(float quantity)
+    {
+        //if (_currentMoney < quantity)
+        //{
+        //    print($"Something is weird, the {quantity} is greater than current player's money = {_currentMoney}");
+        //    _currentMoney = 0;
+        //    return;
+        //}
+
+        //_currentMoney -= quantity;
+        //PlayerMoneyChanged?.Invoke(_currentMoney);
+
+        if(pesos < quantity)
+        {
+            print($"Something is weird, the {quantity} is greater than current player's money = {_currentMoney}");
+            pesos = 0;
+            return;
+        }
+
+        pesos -= quantity;
+        PlayerMoneyChanged?.Invoke(pesos);
+    }
+
+    public void GiveMoney(float quantity)
+    {
+        //_currentMoney += quantity;
+        //PlayerMoneyChanged?.Invoke(_currentMoney);
+
+        pesos += quantity;
+        PlayerMoneyChanged?.Invoke(pesos);
+    }
+
+
+    ///  Fin cosas script fer
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -79,7 +129,10 @@ public class GameManager : MonoBehaviour
         s += lechuga.ToString() + "|";
         s += zapallo.ToString() + "|";
         s += stomate.ToString() + "|";
-        s += szana.ToString(); //No olvidar que el ultimo no lleva el pipe
+        s += szana.ToString() + "|";
+        s += schoclo.ToString() + "|";
+        s += szapallo.ToString() + "|";
+        s += slechuga.ToString(); //No olvidar que el ultimo no lleva el pipe
 
 
         //s += "0";
@@ -136,10 +189,52 @@ public class GameManager : MonoBehaviour
         zapallo = int.Parse(data[6]);
         stomate = int.Parse(data[7]);
         szana = int.Parse(data[8]);
+        schoclo = int.Parse(data[9]);
+        szapallo = int.Parse(data[10]);
+        slechuga = int.Parse(data[11]);
 
 
         //Cambio la herramienta.
         Debug.Log(data);
 
+    }
+
+    public bool TryCompleteOrder(Order order) {
+        // Temporal
+        Dictionary<string, int> translator = new Dictionary<string, int> {
+            { "Choclo", choclo },
+            { "Zapallo", zapallo },
+            { "Tomate", tomate },
+            { "Lechuga", lechuga },
+            { "Zanahoria", zanahoria }
+        };
+
+        if (translator.TryGetValue(order.orderName, out var amount)) {
+            if (amount >= order.amount) {
+                GiveMoney(order.cost);
+                switch (order.orderName) {
+                    case "Choclo":
+                        choclo -= order.amount;
+                        break;
+                    case "Zapallo":
+                        zapallo -= order.amount;
+                        break;
+                    case "Tomate":
+                        tomate -= order.amount;
+                        break;
+                    case "Lechuga":
+                        lechuga -= order.amount;
+                        break;
+                    case "Zanahoria":
+                        zanahoria -= order.amount;
+                        break;
+                }
+
+                return true;
+            }
+        }
+        
+    
+        return false;
     }
 }
