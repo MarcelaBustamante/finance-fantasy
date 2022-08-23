@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FinanceFantasy.Bank.BankManager">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QEQAAAAICAgAAAAAIAASAAAAAAAAAAAABAAIAAgAAEA=</HashCode>
+      <FileName>Assets\Scripts\BankManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.Bank.BankOperation">
+    <Position X="7.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAgAAAAASAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bank\BankOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.Bank.CreditCard">
+    <Position X="10" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAEAAAAEgAAAACAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Bank\CreditCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.Bank.Insurance">
+    <Position X="7.25" Y="3.75" Width="2" />
+    <InheritanceLine Type="FinanceFantasy.Bank.BankOperation" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.375" Y="2.824" />
+        <Point X="8.375" Y="3.626" />
+        <Point X="8.375" Y="3.626" />
+        <Point X="8.375" Y="3.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAABACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bank\Insurance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.Bank.Loan">
+    <Position X="5.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAABACAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Bank\Loan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoystickPlayerExample" Collapsed="true">
+    <Position X="16" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAEAAAAAAAAAAAAAQAAAAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Examples\JoystickPlayerExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoystickSetterExample" Collapsed="true">
+    <Position X="20" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAAAAAAAAAAAAAAAACAAAAAQAQAQAACAAEIAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Examples\JoystickSetterExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Joystick">
+    <Position X="2.75" Y="7" Width="2" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACABACIACRICAAEACBAASICAAEAADAKAQQCCAEAIAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Base\Joystick.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.22" />
+  </Class>
+  <Class Name="DynamicJoystick">
+    <Position X="0.75" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAACAACAIAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FixedJoystick" Collapsed="true">
+    <Position X="0.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FloatingJoystick">
+    <Position X="5.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VariableJoystick">
+    <Position X="5.25" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAKAACAIAgAAAAAAAAAAAAAAAgAAACIAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIMovement">
+    <Position X="14" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAQAAiAAAAAAAAAABAAAAAAAAQAAIABgBAAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Others\AIMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimationEvents" Collapsed="true">
+    <Position X="14" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Others\AnimationEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CamaraMotor">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAIAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Others\CamaraMotor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chest">
+    <Position X="9.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAABAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Others\Cofre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collectable">
+    <Position X="9.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAABAAAAAAAAAAAEABAAAAAQAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Others\Collectable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collidable">
+    <Position X="11.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAACAAAAAAAAAAEAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Others\Collidable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FloatingText" Collapsed="true">
+    <Position X="20" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAABAAIAAAAAAAAAEAAQAEAAAAAAAAAAIAAEIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Others\FloatingText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FloatingTextManager" Collapsed="true">
+    <Position X="20" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAACEAAAAAAEAAgAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Others\FloatingTextManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="18.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkAAAAACAAAQBAAEAAAIQEBgAAJgCAAHAAAgIAAAEEA=</HashCode>
+      <FileName>Assets\Scripts\Others\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inventory" Collapsed="true">
+    <Position X="20" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAQAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Others\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemManager">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAABAAAAAAgAAAAABAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Others\ItemManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantInstantiation" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAACACAABAAAAAAAAAIAAAAwAIAGAAAAAAAAIAQ=</HashCode>
+      <FileName>Assets\Scripts\Others\PlantInstantiation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player">
+    <Position X="23.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAACEIAgAAAAAAAAAAACAAIAACIAIgAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Others\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlotManager">
+    <Position X="7.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQQAAEEAAAAAAABAAAAABAIAgAAAAAIBAgAAQgEEA=</HashCode>
+      <FileName>Assets\Scripts\Others\PlotManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileManager">
+    <Position X="14" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACACIAAAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\Others\TileManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TxLocalSemillas">
+    <Position X="11.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Others\TxLocalSemillas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShopManager">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAABAAIAAACAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Assets\Scripts\ShopManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonInfo" Collapsed="true">
+    <Position X="18.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAggAAAAAAAAAAAAAAAAAAAgAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\UI\ButtonInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inventory_UI">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAABAAgAUAAAABggAAAAAAAABAAQAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\UI\Inventory_UI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Slot_UI" Collapsed="true">
+    <Position X="21.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAABCAAAAAAAAAAABAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\UI\Slot_UI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Store_UI">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\Store_UI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Touchable_Editor" Collapsed="true">
+    <Position X="20" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\Touchable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Touchable" Collapsed="true">
+    <Position X="20" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\Touchable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Readme" Collapsed="true">
+    <Position X="18.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\TutorialInfo\Scripts\Readme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.Bank.BankController">
+    <Position X="20" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAIAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BankController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.Bank.BankUtils" Collapsed="true">
+    <Position X="18.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utils\BankUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.Player.PlayerMoney">
+    <Position X="23.5" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAQAAAAAAAAAQAAAIAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\PlayerMoney.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.MonoSingleton">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\SingletonMono.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.TimeUtils" Collapsed="true">
+    <Position X="21.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utils\TimeUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.Tick.TickSystem" Collapsed="true">
+    <Position X="12.25" Y="5.25" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="FinanceFantasy.Tick.TickSystem.TickEvent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\TickSystem.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAACAAAAAAAAAAAAAAAgAAICAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TickSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.UI.BankOperationUpdate">
+    <Position X="16" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAAAIAgACAA=</HashCode>
+      <FileName>Assets\Scripts\UI\BankOperationUpdate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinanceFantasy.UI.PlayerMoneyListener">
+    <Position X="16" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\UI\PlayerMoneyListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="AxisOptions" Collapsed="true">
+    <Position X="18.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Base\Joystick.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="JoystickType" Collapsed="true">
+    <Position X="18.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CollectableType" Collapsed="true">
+    <Position X="16" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAABAAAAQAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Others\Collectable.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
