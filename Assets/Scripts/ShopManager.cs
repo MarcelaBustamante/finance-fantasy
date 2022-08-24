@@ -10,7 +10,9 @@ public class ShopManager : MonoBehaviour
     public int[,] shopItems = new int[5, 5];
     public float coins;
     public TextMeshProUGUI CoinsTXT;
-
+    public GameObject checkoutPannel;
+    public GameObject checkoutUI;
+  
 
     void Start()
     {
@@ -56,6 +58,30 @@ public class ShopManager : MonoBehaviour
     public void Checkout()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        Debug.Log(ButtonRef);
+
+        if (ButtonRef)
+        {
+            float price = shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
+            //CFT costo financiero total se toma 200 pero normalmente es mas
+            float priceIn2Quotas = (price + (price * 2)) / 2;
+            float priceIn3Quotas = (price + (price * 2)) / 3;
+            checkoutUI.GetComponent<Checkout_UI>().DebitLbl.text = "1 X $" + price.ToString();
+            checkoutUI.GetComponent<Checkout_UI>().CreditLbl.text = "1 X $" + price.ToString();
+            checkoutUI.GetComponent<Checkout_UI>().CreditLbl2.text = "2 X $" + priceIn2Quotas.ToString();
+            checkoutUI.GetComponent<Checkout_UI>().CreditLbl3.text = "3 X $" + priceIn3Quotas.ToString();
+            ToggleCheckoutPannel();
+        }
+    }
+
+    public void ToggleCheckoutPannel()
+    {
+        if (!checkoutPannel.activeSelf)
+        {
+            checkoutPannel.SetActive(true);
+        }
+        else
+        {
+            checkoutPannel.SetActive(false);
+        }
     }
 }

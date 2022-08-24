@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainLucas.unity
-    guid: f5ec3de541e83464fb357537fc11c02f
+    path: Assets/Scenes/Main.unity
+    guid: 3bba6a5886193b84ba2051a188933821
   - enabled: 1
     path: Assets/Scenes/Local de semillas.unity
     guid: f246edbc151874afe91e2353c2c36429
   - enabled: 1
     path: Assets/Scenes/CompraProductos.unity
     guid: c0025a575d21d144bbec7e007b58685c
+  - enabled: 1
+    path: Assets/Scenes/MainLucas.unity
+    guid: f5ec3de541e83464fb357537fc11c02f
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: bb71ba97de99adc41920b7559a5063a8, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 9d4021233d80f438d8faeab91120fd7f, type: 2}
