@@ -35,5 +35,9 @@ public class Collectable : Collidable
 
 public enum CollectableType
 {
-    NONE, CARROTE_SEED, TOMATOES_SEED, STRAWBERRY_SEED, CORN_SEED
+    NONE = 0,
+    CARROTE_SEED = 1,
+    TOMATOES_SEED = 2, 
+    STRAWBERRY_SEED = 3, 
+    CORN_SEED = 4
 }
