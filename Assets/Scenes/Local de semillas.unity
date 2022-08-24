@@ -468,6 +468,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 928074745}
     - target: {fileID: 7151041700102673127, guid: 28d02a4aeeb43a242acff8194791829e, type: 3}
+      propertyPath: inventario
+      value: 
+      objectReference: {fileID: 11400000, guid: fb48481751ad87042b7c523198fe5dd1, type: 2}
+    - target: {fileID: 7151041700102673127, guid: 28d02a4aeeb43a242acff8194791829e, type: 3}
       propertyPath: inventory.slots.Array.size
       value: 27
       objectReference: {fileID: 0}
@@ -10502,7 +10506,7 @@ GameObject:
   - component: {fileID: 258983283}
   - component: {fileID: 258983284}
   m_Layer: 5
-  m_Name: CreditToggle2
+  m_Name: Toggle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10517,7 +10521,7 @@ RectTransform:
   m_GameObject: {fileID: 258983282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.6410666, y: 3.0648885, z: 1.0005332}
+  m_LocalScale: {x: 6.641067, y: 3.0648885, z: 1.0005332}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 184540834}
@@ -10527,7 +10531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 449, y: -89}
+  m_AnchoredPosition: {x: 279.00003, y: -89}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258983284
@@ -10573,10 +10577,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 184540835}
   toggleTransition: 1
   graphic: {fileID: 1731211985}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 882412228}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 882412227}
+        m_TargetAssemblyTypeName: Checkout_UI, Assembly-CSharp
+        m_MethodName: updateTotal
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &262908243
 GameObject:
@@ -10628,7 +10644,7 @@ GameObject:
   - component: {fileID: 265538952}
   - component: {fileID: 265538953}
   m_Layer: 5
-  m_Name: DebitToggle
+  m_Name: Toggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10641,9 +10657,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 265538951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 4, z: 1}
+  m_LocalScale: {x: 6, y: 3.9999998, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 578092998}
@@ -10653,7 +10669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 380.00003, y: -28}
+  m_AnchoredPosition: {x: 380, y: -28.00003}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265538953
@@ -10699,11 +10715,23 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 578092999}
   toggleTransition: 1
   graphic: {fileID: 1773587702}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 882412228}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
+      m_Calls:
+      - m_Target: {fileID: 882412227}
+        m_TargetAssemblyTypeName: Checkout_UI, Assembly-CSharp
+        m_MethodName: updateTotal
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
 --- !u!1 &280323375
 GameObject:
   m_ObjectHideFlags: 0
@@ -12662,12 +12690,12 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2 X $ 0
+  m_Text: Dos pagos de $ 0
 --- !u!222 &662806877
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13593,7 +13621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1ee7c52c8664fcd881395fdcc20f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemManager: {fileID: 0}
+  itemManager: {fileID: 777802773}
   playerSprites: []
   weaponSprites: []
   weaponPrices: 
@@ -13603,7 +13631,7 @@ MonoBehaviour:
   floatingTextManager: {fileID: 0}
   plotManager: {fileID: 0}
   plantInstantiation: {fileID: 0}
-  pesos: 0
+  pesos: 2000
   choclo: 0
   tomate: 0
   zanahoria: 0
@@ -13964,6 +13992,7 @@ GameObject:
   m_Component:
   - component: {fileID: 882412226}
   - component: {fileID: 882412227}
+  - component: {fileID: 882412228}
   m_Layer: 5
   m_Name: FormGroup
   m_TagString: Untagged
@@ -14010,7 +14039,22 @@ MonoBehaviour:
   CreditLbl: {fileID: 1856727116}
   CreditLbl2: {fileID: 662806876}
   CreditLbl3: {fileID: 1683588088}
+  totalTxt: {fileID: 1578081045}
   infoPannel: {fileID: 963970104}
+  shopManager: {fileID: 1077179738}
+--- !u!114 &882412228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882412225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowSwitchOff: 0
 --- !u!1 &894648965
 GameObject:
   m_ObjectHideFlags: 0
@@ -14754,12 +14798,12 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1 X $ 0
+  m_Text: Contado X $ 0
 --- !u!222 &969702907
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14911,9 +14955,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1077179738}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: ToggleCheckoutPannel
+      - m_Target: {fileID: 882412227}
+        m_TargetAssemblyTypeName: Checkout_UI, Assembly-CSharp
+        m_MethodName: Buy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15067,7 +15111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1057013202
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15318,6 +15362,7 @@ MonoBehaviour:
   CoinsTXT: {fileID: 1114718984}
   checkoutPannel: {fileID: 1057013201}
   checkoutUI: {fileID: 882412225}
+  player: {fileID: 84240813}
 --- !u!1 &1094797615
 GameObject:
   m_ObjectHideFlags: 0
@@ -15654,7 +15699,7 @@ GameObject:
   - component: {fileID: 1141545697}
   - component: {fileID: 1141545698}
   m_Layer: 5
-  m_Name: CreditToggle1
+  m_Name: Toggle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15669,7 +15714,7 @@ RectTransform:
   m_GameObject: {fileID: 1141545696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.6410666, y: 3.0648885, z: 1.0005332}
+  m_LocalScale: {x: 6.641067, y: 3.0648885, z: 1.0005332}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 901750129}
@@ -15679,7 +15724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 449, y: -29}
+  m_AnchoredPosition: {x: 279, y: -29}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1141545698
@@ -15725,10 +15770,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 901750130}
   toggleTransition: 1
   graphic: {fileID: 1094797617}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 882412228}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 882412227}
+        m_TargetAssemblyTypeName: Checkout_UI, Assembly-CSharp
+        m_MethodName: updateTotal
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1146815373
 GameObject:
@@ -16170,7 +16227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -349.40002, y: 0}
+  m_AnchoredPosition: {x: -427, y: 0}
   m_SizeDelta: {x: 216.4, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239713090
@@ -20192,12 +20249,12 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3 X $ 0
+  m_Text: Tres pagos de $ 0
 --- !u!222 &1683588089
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21031,12 +21088,12 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1 X $ 0
+  m_Text: Un pago de $ 0
 --- !u!222 &1856727117
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27626,11 +27683,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 871
+      value: 591.2795
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 554
+      value: 441.2095
       objectReference: {fileID: 0}
     - target: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27929,7 +27986,7 @@ GameObject:
   - component: {fileID: 2084068278}
   - component: {fileID: 2084068279}
   m_Layer: 5
-  m_Name: CreditToggle
+  m_Name: Toggle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27944,7 +28001,7 @@ RectTransform:
   m_GameObject: {fileID: 2084068277}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.6410666, y: 3.0648885, z: 1.0005332}
+  m_LocalScale: {x: 6.641067, y: 3.0648885, z: 1.0005332}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1828000082}
@@ -27954,7 +28011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 449, y: 31}
+  m_AnchoredPosition: {x: 279.00003, y: 30.999992}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2084068279
@@ -28000,10 +28057,22 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1828000083}
   toggleTransition: 1
   graphic: {fileID: 635985027}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 882412228}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 882412227}
+        m_TargetAssemblyTypeName: Checkout_UI, Assembly-CSharp
+        m_MethodName: updateTotal
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!114 &2097830317 stripped
 MonoBehaviour:

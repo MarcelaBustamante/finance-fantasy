@@ -101,6 +101,10 @@ public class GameManager : MonoBehaviour
         PlayerMoneyChanged?.Invoke(pesos);
     }
 
+    public float GetMoney()
+    {
+        return pesos;
+    }
 
     ///  Fin cosas script fer
 

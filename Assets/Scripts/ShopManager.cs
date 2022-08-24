@@ -12,10 +12,15 @@ public class ShopManager : MonoBehaviour
     public TextMeshProUGUI CoinsTXT;
     public GameObject checkoutPannel;
     public GameObject checkoutUI;
-  
+    private int itemID;
+
+    [SerializeField] private Dictionary<string, GameObject> collectables;
+    GameObject ButtonRef;
+    public Player player;
 
     void Start()
     {
+        coins = GameManager.instance.GetMoney();
         CoinsTXT.text = "Coins:" + coins.ToString();
 
         //ID's
@@ -36,39 +41,48 @@ public class ShopManager : MonoBehaviour
         shopItems[3, 3] = 0;
         shopItems[3, 4] = 0;
 
+       //
+       // shopItems
     }
 
 
-    public void Buy()
+    public void Buy(float totalPrice, int quota)
     {
-        GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+        this.ToggleCheckoutPannel();
+        Debug.Log("Precio total: " + totalPrice.ToString() + "En cuotas " + quota.ToString() + "Con id " + itemID);
 
-        if (coins >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+        if (coins > totalPrice && quota == 0)
         {
-            coins -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
-            shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]++;
+            Vector3Int position = new Vector3Int(
+            Mathf.RoundToInt(transform.position.x),
+            Mathf.RoundToInt(transform.position.y),
+            0);
+            coins -= totalPrice;
+            shopItems[3, itemID]++;
             CoinsTXT.text = "Coins:" + coins.ToString();
-            ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
-
+            ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, itemID].ToString();
+            GameManager.instance.pesos = coins;
+            Collectable coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CARROTE_SEED));
+            player.inventory.Add(coll);
+            GameManager.instance.SaveState();
         }
-
-
     }
 
     public void Checkout()
     {
-        GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+        ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
 
         if (ButtonRef)
         {
-            float price = shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
+            itemID = ButtonRef.GetComponent<ButtonInfo>().ItemID;
+            float price = shopItems[2, itemID];
             //CFT costo financiero total se toma 200 pero normalmente es mas
             float priceIn2Quotas = (price + (price * 2)) / 2;
             float priceIn3Quotas = (price + (price * 2)) / 3;
-            checkoutUI.GetComponent<Checkout_UI>().DebitLbl.text = "1 X $" + price.ToString();
-            checkoutUI.GetComponent<Checkout_UI>().CreditLbl.text = "1 X $" + price.ToString();
-            checkoutUI.GetComponent<Checkout_UI>().CreditLbl2.text = "2 X $" + priceIn2Quotas.ToString();
-            checkoutUI.GetComponent<Checkout_UI>().CreditLbl3.text = "3 X $" + priceIn3Quotas.ToString();
+            checkoutUI.GetComponent<Checkout_UI>().DebitLbl.text = "Contado $" + price.ToString();
+            checkoutUI.GetComponent<Checkout_UI>().CreditLbl.text = "Un pago $" + price.ToString();
+            checkoutUI.GetComponent<Checkout_UI>().CreditLbl2.text = "Dos pagos $" + priceIn2Quotas.ToString();
+            checkoutUI.GetComponent<Checkout_UI>().CreditLbl3.text = "Tres pagos $" + priceIn3Quotas.ToString();
             ToggleCheckoutPannel();
         }
     }
@@ -85,3 +99,5 @@ public class ShopManager : MonoBehaviour
         }
     }
 }
+
+

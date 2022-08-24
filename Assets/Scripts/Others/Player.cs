@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     public Animator animator;
     public Inventory inventory;
     public Joystick joystick;
+    //esto es lo de fer
+   // public Inventario inventario;
 
     //Cosas del script de fer
     public static Action<float> PlayerMoneyChanged;
@@ -35,13 +37,14 @@ public class Player : MonoBehaviour
         PlayerMoneyChanged?.Invoke(_currentMoney);
     }
 
-    
+
     ///  Fin cosas script fer
 
     private void Awake()
     {
         inventory = new Inventory(27);
         PlayerMoneyChanged?.Invoke(_currentMoney);//Script Fer
+        print("inventario " + inventario.itemsInventario.Count);
     }
 
 
