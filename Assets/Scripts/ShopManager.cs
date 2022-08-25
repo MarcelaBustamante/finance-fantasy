@@ -10,6 +10,7 @@ public class ShopManager : MonoBehaviour
     public int[,] shopItems = new int[5, 5];
     public float coins;
     public TextMeshProUGUI CoinsTXT;
+    public TextMeshProUGUI errorTxt;
     public GameObject checkoutPannel;
     public GameObject checkoutUI;
     private int itemID;
@@ -21,7 +22,7 @@ public class ShopManager : MonoBehaviour
     void Start()
     {
         coins = GameManager.instance.GetMoney();
-        CoinsTXT.text = "Coins:" + coins.ToString();
+        CoinsTXT.text = "Dinero:" + coins.ToString();
 
         //ID's
         shopItems[1, 1] = 1;
@@ -41,7 +42,6 @@ public class ShopManager : MonoBehaviour
         shopItems[3, 3] = 0;
         shopItems[3, 4] = 0;
 
-       //
        // shopItems
     }
 
@@ -49,22 +49,20 @@ public class ShopManager : MonoBehaviour
     public void Buy(float totalPrice, int quota)
     {
         this.ToggleCheckoutPannel();
-        Debug.Log("Precio total: " + totalPrice.ToString() + "En cuotas " + quota.ToString() + "Con id " + itemID);
-
         if (coins > totalPrice && quota == 0)
         {
-            Vector3Int position = new Vector3Int(
-            Mathf.RoundToInt(transform.position.x),
-            Mathf.RoundToInt(transform.position.y),
-            0);
+            errorTxt.text = "";
             coins -= totalPrice;
             shopItems[3, itemID]++;
             CoinsTXT.text = "Coins:" + coins.ToString();
             ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, itemID].ToString();
             GameManager.instance.pesos = coins;
             Collectable coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CARROTE_SEED));
-            player.inventory.Add(coll);
-            GameManager.instance.SaveState();
+            GameManager.instance.inventory.Add(coll);
+        }
+        else
+        {
+            errorTxt.text = "Fondos insuficientes.";
         }
     }
 

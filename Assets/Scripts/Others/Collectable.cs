@@ -27,7 +27,7 @@ public class Collectable : Collidable
      
         if (player)
         {
-            player.inventory.Add(this);
+            GameManager.instance.inventory.Add(this);
             Destroy(this.gameObject);
         }
     }

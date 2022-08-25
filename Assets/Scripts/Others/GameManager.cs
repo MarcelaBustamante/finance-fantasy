@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using FinanceFantasy.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,27 +12,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     public ItemManager itemManager;
+    public Inventory inventory;
 
-
-    private void Awake()
-    {
-        if (GameManager.instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-
-        PlayerPrefs.DeleteAll();// Esto me borra todo lo que tengo en el player. Lo puse por que me tiraba error al agregar los int de semillas.
-
-        instance = this;
-        // SceneLoaded es un evento que dispara el SceneManager un vez que se carga la escena.
-        // Scene manager va a ir por todas las funciones que hay en LoadState y las va a correr.
-        //SceneManager.sceneLoaded += LoadState;
-        LoadData();
-        //Hace que el no se destruya el game manager a medida que cambio de scene
-        DontDestroyOnLoad(gameObject);
-    }
 
     // Recursos
     public List<Sprite> playerSprites;
@@ -60,15 +42,32 @@ public class GameManager : MonoBehaviour
     public int slechuga;
 
 
-
-
-
-
-
     //Cosas del script de fer
     public static Action<float> PlayerMoneyChanged;
     private float _currentMoney = 1000f;
 
+    private void Awake()
+    {
+        inventory = new Inventory(27);
+        if (GameManager.instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+
+        PlayerPrefs.DeleteAll();// Esto me borra todo lo que tengo en el player. Lo puse por que me tiraba error al agregar los int de semillas.
+
+        instance = this;
+        // SceneLoaded es un evento que dispara el SceneManager un vez que se carga la escena.
+        // Scene manager va a ir por todas las funciones que hay en LoadState y las va a correr.
+        //SceneManager.sceneLoaded += LoadState;
+        LoadData();
+        //Hace que el no se destruya el game manager a medida que cambio de scene
+        DontDestroyOnLoad(gameObject);
+    }
+
+ 
     public void TakeMoney(float quantity)
     {
         //if (_currentMoney < quantity)

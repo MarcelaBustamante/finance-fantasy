@@ -9,12 +9,12 @@ public class Player : MonoBehaviour
     private Vector3 moveDelta; // basicamente es para ir moviendo al muñeco. Donde estoy y donde lo voy a mandar
     private RaycastHit2D hit;
     public Animator animator;
-    public Inventory inventory;
+    //public Inventory inventory;
     public Joystick joystick;
-    //esto es lo de fer
+    //para usar scriptable object
    // public Inventario inventario;
 
-    //Cosas del script de fer
+    
     public static Action<float> PlayerMoneyChanged;
     private float _currentMoney = 1000f;
 
@@ -38,11 +38,8 @@ public class Player : MonoBehaviour
     }
 
 
-    ///  Fin cosas script fer
-
     private void Awake()
     {
-        inventory = new Inventory(27);
         PlayerMoneyChanged?.Invoke(_currentMoney);//Script Fer
 
     }

@@ -40,9 +40,9 @@ public class Inventory_UI : MonoBehaviour
             {
                 if (slots[i])
                 {
-                    if (player.inventory.slots[i].type != CollectableType.NONE)
+                    if (GameManager.instance.inventory.slots[i].type != CollectableType.NONE)
                     {
-                        slots[i].SetItem(player.inventory.slots[i]);
+                        slots[i].SetItem(GameManager.instance.inventory.slots[i]);
                     }
                     else
                     {
@@ -71,10 +71,10 @@ public class Inventory_UI : MonoBehaviour
     public void Remove()
     {
         Collectable itemToDrop = GameManager.instance.itemManager.GetItemByType(
-            player.inventory.slots[itemSelected].type);
+            GameManager.instance.inventory.slots[itemSelected].type);
         if (itemSelected != -1 && itemToDrop != null)
         {
-            player.inventory.Remove(itemSelected);
+            GameManager.instance.inventory.Remove(itemSelected);
             disableTrash();
         }
     }
