@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: InventarioJugador
   m_EditorClassIdentifier: 
   itemsInventario:
-  - nombre: asdasfasf
+  - nombre: 10000
     cantidad: 12344

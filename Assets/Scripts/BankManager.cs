@@ -18,7 +18,10 @@ namespace FinanceFantasy.Bank {
         // Observable 
         // Used action because we don't need to return values, only notify some UI elements
         public static Action<BankOperation> SignUpWithBank;
-        
+        public CreditCard CurrentCreditCard { get { 
+                return _playerCurrentCard;
+            }
+        }
         private BankController _bankController = new BankController();
         private PlayerMoney _playerMoney;
 
@@ -104,6 +107,12 @@ namespace FinanceFantasy.Bank {
             // _playerMoney.TakeMoney(100f);
             // Alert whoever we need to alert
             SignUpWithBank?.Invoke(_playerInsuranceLoan);
+        }
+
+        
+        public bool addExpense(float _expense)
+        {
+            return true;
         }
     }
 }

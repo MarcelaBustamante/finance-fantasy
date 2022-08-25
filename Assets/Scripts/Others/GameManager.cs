@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
         inventory = new Inventory(27);
         if (GameManager.instance != null)
         {
+            Debug.LogWarning("GameManagerDestroy " + gameObject.name );
             Destroy(gameObject);
             return;
         }
@@ -64,7 +65,7 @@ public class GameManager : MonoBehaviour
         //SceneManager.sceneLoaded += LoadState;
         LoadData();
         //Hace que el no se destruya el game manager a medida que cambio de scene
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); 
     }
 
  

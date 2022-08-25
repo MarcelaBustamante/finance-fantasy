@@ -10219,7 +10219,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -167}
+  m_AnchoredPosition: {x: 2, y: -115}
   m_SizeDelta: {x: 721.44, y: 780.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &204699961
@@ -10242,13 +10242,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "El CFT es esl costo financiero total, es decir el costo final o real de
-    un pr\xE9stamo.  Es un indicador del costo que afrontar\xE1s. El CFT es el valor
-    total de lo que pagar\xE1s por financiar una deuda de tu tarjeta de cr\xE9dito.\n\xBFQu\xE9
-    se debe tener en cuenta respecto al manejo de tarjetas de cr\xE9dito?\r\nPara
-    manejar responsablemente tu tarjeta de cr\xE9dito y evitar grandes deudas, te
-    listamos algunas recomendaciones:\n\n1.Revis\xE1 periodicamente tu estado de
-    cuenta, para ver que los cobros y pagos se hayan efectuado correctamente.\r\n2.Evit\xE1
+  m_text: "El CFT es esl costo financiero total, es decir el costo real de un pr\xE9stamo. 
+    El valor total de lo que pagar\xE1s por financiar una deuda de tu tarjeta de
+    cr\xE9dito.\n\xBFQu\xE9 se debe tener en cuenta respecto al manejo de tarjetas
+    de cr\xE9dito?\r\nPara manejar responsablemente tu tarjeta de cr\xE9dito y evitar
+    grandes deudas, te listamos algunas recomendaciones:\n\n1.Revis\xE1 periodicamente
+    tu estado de cuenta, para ver que los cobros y pagos se hayan efectuado correctamente.\r\n2.Evit\xE1
     pagar el m\xEDnimo de tu tarjeta para no generar m\xE1s intereses a tu deuda
     e intent\xE1 pagar siempre el total de los saldos.\r\n3.Pag\xE1 siempre antes
     de la fecha de vencimiento.\r\n4.Al usar el cr\xE9dito, ya sea en un solo pago
@@ -10280,7 +10279,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.55
+  m_fontSize: 24.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10916,7 +10915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 717, y: -482}
+  m_AnchoredPosition: {x: 717, y: -422}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &309467357
@@ -11399,114 +11398,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364068748}
   m_CullTransparentMesh: 1
---- !u!1001 &398462861
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748844, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748846, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748847, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: pesos
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 2677401301723748847, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 84240813}
-    - target: {fileID: 2677401301723748847, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: CoinsTXT
-      value: 
-      objectReference: {fileID: 1114718984}
-    - target: {fileID: 2677401301723748847, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: itemManager
-      value: 
-      objectReference: {fileID: 398462862}
-    - target: {fileID: 2677401301723748847, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: inventory.slots.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8672877608066615590, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: collectableItems.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8672877608066615590, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: collectableItems.Array.data[0]
-      value: 
-      objectReference: {fileID: 5136768334416876950, guid: 576b339d470237c4dbb9aac8d9d8f988, type: 3}
-    - target: {fileID: 8672877608066615590, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: collectableItems.Array.data[1]
-      value: 
-      objectReference: {fileID: 8671517860351709975, guid: 3d9519701f1cca443898581df73d995e, type: 3}
-    - target: {fileID: 8672877608066615590, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: collectableItems.Array.data[2]
-      value: 
-      objectReference: {fileID: 1715381011383111589, guid: d377b03df9910984e9b7164a9274cc93, type: 3}
-    - target: {fileID: 8672877608066615590, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-      propertyPath: collectableItems.Array.data[3]
-      value: 
-      objectReference: {fileID: 3879068219065668942, guid: 2a64f9e409ce44941985062c2874661f, type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
---- !u!114 &398462862 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8672877608066615590, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
-  m_PrefabInstance: {fileID: 398462861}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46808d11206daa04b81e49f303091042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &407751951
 GameObject:
   m_ObjectHideFlags: 0
@@ -11602,7 +11493,7 @@ RectTransform:
   - {fileID: 636417739}
   - {fileID: 1057013202}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12508,7 +12399,7 @@ RectTransform:
   m_GameObject: {fileID: 605471955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6875, y: 1.3875, z: 1}
+  m_LocalScale: {x: 1.7718749, y: 1.5262501, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 894648966}
@@ -12517,7 +12408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -516, y: 85}
+  m_AnchoredPosition: {x: -516, y: 216}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605471957
@@ -12679,7 +12570,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &635985025
 GameObject:
@@ -13863,92 +13754,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!1 &777802770
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 777802772}
-  - component: {fileID: 777802771}
-  - component: {fileID: 777802773}
-  m_Layer: 0
-  m_Name: GameManager1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &777802771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777802770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c1ee7c52c8664fcd881395fdcc20f01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemManager: {fileID: 777802773}
-  inventory:
-    slots: []
-  playerSprites: []
-  weaponSprites: []
-  weaponPrices: 
-  xpTable: 
-  player: {fileID: 84240813}
-  tileManager: {fileID: 0}
-  floatingTextManager: {fileID: 0}
-  plotManager: {fileID: 0}
-  plantInstantiation: {fileID: 0}
-  pesos: 2000
-  choclo: 0
-  tomate: 0
-  zanahoria: 0
-  lechuga: 0
-  zapallo: 0
-  stomate: 0
-  szana: 0
-  schoclo: 0
-  szapallo: 0
-  slechuga: 0
-  CoinsTXT: {fileID: 0}
---- !u!4 &777802772
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777802770}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &777802773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777802770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46808d11206daa04b81e49f303091042, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collectableItems:
-  - {fileID: 3879068219065668942, guid: 2a64f9e409ce44941985062c2874661f, type: 3}
-  - {fileID: 5136768334416876950, guid: 576b339d470237c4dbb9aac8d9d8f988, type: 3}
-  - {fileID: 1715381011383111589, guid: d377b03df9910984e9b7164a9274cc93, type: 3}
-  - {fileID: 8671517860351709975, guid: 3d9519701f1cca443898581df73d995e, type: 3}
 --- !u!1 &781178025
 GameObject:
   m_ObjectHideFlags: 0
@@ -15187,7 +14992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117.18999, y: -482}
+  m_AnchoredPosition: {x: 117.18999, y: -422.00003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1006621195
@@ -19083,7 +18888,7 @@ RectTransform:
   - {fileID: 1114718983}
   - {fileID: 1077179737}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -21371,7 +21176,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1857685336
 BoxCollider2D:

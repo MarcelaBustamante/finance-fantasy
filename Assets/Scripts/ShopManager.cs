@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using FinanceFantasy.Bank;
+
 public class ShopManager : MonoBehaviour
 {
 
@@ -14,7 +16,7 @@ public class ShopManager : MonoBehaviour
     public GameObject checkoutPannel;
     public GameObject checkoutUI;
     private int itemID;
-
+    
     [SerializeField] private Dictionary<string, GameObject> collectables;
     GameObject ButtonRef;
     public Player player;
@@ -25,9 +27,13 @@ public class ShopManager : MonoBehaviour
         CoinsTXT.text = "Dinero:" + coins.ToString();
 
         //ID's
+        //Zanahoria
         shopItems[1, 1] = 1;
+        //Tomate
         shopItems[1, 2] = 2;
+        //lechuga
         shopItems[1, 3] = 3;
+        //maiz
         shopItems[1, 4] = 4;
 
         //Price
@@ -48,19 +54,42 @@ public class ShopManager : MonoBehaviour
 
     public void Buy(float totalPrice, int quota)
     {
+        errorTxt.text = "";
         this.ToggleCheckoutPannel();
-        if (coins > totalPrice && quota == 0)
+        if (coins >= totalPrice && quota == 0)
         {
-            errorTxt.text = "";
+           
+            //cliente paga
             coins -= totalPrice;
             shopItems[3, itemID]++;
             CoinsTXT.text = "Coins:" + coins.ToString();
             ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, itemID].ToString();
+            //se actualiza el precio en game manager
             GameManager.instance.pesos = coins;
-            Collectable coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CARROTE_SEED));
-            GameManager.instance.inventory.Add(coll);
+            //se lleva el producto en su inventario y ademas se suma el producto al game manager
+            AddProduct(itemID);
         }
-        else
+        if(quota > 0  && quota < 4)
+        {
+            bool haveCrediCard = false;
+            if (!haveCrediCard)
+            {
+                errorTxt.text = "Ustend no tiene tarjeta de crédito, se recomienda ir al banco y pedir una";
+            }
+            else
+            {
+                errorTxt.text = "";
+                //cliente paga
+                //TODO:agregar el descuento de  la tarjeta de crédito totalPrice;
+                shopItems[3, itemID]++;
+                ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, itemID].ToString();
+                //se actualiza el precio en game manager
+                GameManager.instance.pesos = coins;
+                //se lleva el producto en su inventario y ademas se suma el producto al game manager
+                AddProduct(itemID);
+            }
+        }
+       if(coins < totalPrice)
         {
             errorTxt.text = "Fondos insuficientes.";
         }
@@ -94,6 +123,40 @@ public class ShopManager : MonoBehaviour
         else
         {
             checkoutPannel.SetActive(false);
+        }
+    }
+
+    private void AddProduct(int itemID)
+    {
+        Collectable coll;
+        switch (itemID)
+        {
+            case 1:
+                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CARROTE_SEED));
+                GameManager.instance.szana += 1;
+                GameManager.instance.inventory.Add(coll);
+                break;
+
+            case 2:
+                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.TOMATOES_SEED));
+                GameManager.instance.stomate += 1;
+                GameManager.instance.inventory.Add(coll);
+                break;
+
+            case 3:
+                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.LETTUCE_SEED));
+                GameManager.instance.slechuga += 1;
+                GameManager.instance.inventory.Add(coll);
+                break;
+
+            case 4:
+                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CORN_SEED));
+                GameManager.instance.schoclo += 1;
+                GameManager.instance.inventory.Add(coll);
+                break;
+            default:
+                errorTxt.text = "Producto inexistente";
+                break;
         }
     }
 }

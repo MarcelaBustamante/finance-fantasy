@@ -113,7 +113,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  type: 0
+  type: 3
+  icon: {fileID: 0}
   isPlanted: 0
   plant: {fileID: 193493389821024002}
   plantStages:
