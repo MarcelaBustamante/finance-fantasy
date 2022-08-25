@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
     {
         inventory = new Inventory(27);
         PlayerMoneyChanged?.Invoke(_currentMoney);//Script Fer
-        print("inventario " + inventario.itemsInventario.Count);
+
     }
 
 
