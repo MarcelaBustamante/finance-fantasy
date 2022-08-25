@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemManager: {fileID: 0}
+  inventory:
+    slots: []
   playerSprites: []
   weaponSprites: []
   weaponPrices: 
@@ -79,4 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectableItems:
-  - {fileID: 0}
+  - {fileID: 5136768334416876950, guid: 576b339d470237c4dbb9aac8d9d8f988, type: 3}
+  - {fileID: 8671517860351709975, guid: 3d9519701f1cca443898581df73d995e, type: 3}
+  - {fileID: 1715381011383111589, guid: d377b03df9910984e9b7164a9274cc93, type: 3}
+  - {fileID: 3879068219065668942, guid: 2a64f9e409ce44941985062c2874661f, type: 3}
