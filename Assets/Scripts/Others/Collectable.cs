@@ -38,6 +38,6 @@ public enum CollectableType
     NONE = 0,
     CARROTE_SEED = 1,
     TOMATOES_SEED = 2, 
-    STRAWBERRY_SEED = 3, 
+    LETTUCE_SEED = 3, 
     CORN_SEED = 4
 }

@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CompraProductos.unity
     guid: c0025a575d21d144bbec7e007b58685c
   - enabled: 1
+    path: Assets/Scenes/BankManager.unity
+    guid: 1aa01659fcf1eba46b12955c2b8bcbda
+  - enabled: 0
     path: Assets/Scenes/MainLucas.unity
     guid: f5ec3de541e83464fb357537fc11c02f
   m_configObjects:

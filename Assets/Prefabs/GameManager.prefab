@@ -52,10 +52,10 @@ MonoBehaviour:
   weaponSprites: []
   weaponPrices: 
   xpTable: 
-  player: {fileID: 0}
-  tileManager: {fileID: 0}
+  player: {fileID: 7151041700102673127, guid: 28d02a4aeeb43a242acff8194791829e, type: 3}
+  tileManager: {fileID: 6547049272770850293, guid: 59bca1757ba9e7c44ace465b44e5a7a9, type: 3}
   floatingTextManager: {fileID: 0}
-  plotManager: {fileID: 0}
+  plotManager: {fileID: 6570318273611699765, guid: be07ba5d545ca1b448e2d4a21ddf6ca8, type: 3}
   plantInstantiation: {fileID: 0}
   pesos: 15
   choclo: 0
