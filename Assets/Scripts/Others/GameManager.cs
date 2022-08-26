@@ -5,6 +5,7 @@ using System;
 using FinanceFantasy.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEditor.SearchService;
 
 public class GameManager : MonoBehaviour
 {
@@ -25,8 +26,8 @@ public class GameManager : MonoBehaviour
     public Player player;
     public TileManager tileManager;
     public FloatingTextManager floatingTextManager;
-    public PlotManager plotManager;
-    public PlantInstantiation plantInstantiation;
+    //public PlotManager plotManager;
+    //public PlantInstantiation plantInstantiation;
 
     //Logic
     public float pesos;
@@ -41,10 +42,35 @@ public class GameManager : MonoBehaviour
     public int szapallo;
     public int slechuga;
 
+    
 
     //Cosas del script de fer
     public static Action<float> PlayerMoneyChanged;
     private float _currentMoney = 1000f;
+
+    private void Start()
+    {
+        Debug.Log("Se llama");
+    }
+
+    private void Update()
+    {
+        GameObject playerGameObj = GameObject.Find("Player");
+        GameObject tileManagerObj = GameObject.Find("TileManager");
+        GameObject floatingTextManagerObj = GameObject.Find("FloatingTextManager");
+
+        if (player == null )
+            player = playerGameObj.GetComponent<Player>();
+
+        if (tileManager == null & SceneManager.GetActiveScene().name=="Main")
+            tileManager = tileManagerObj.GetComponent<TileManager>();
+
+        if (floatingTextManager == null & SceneManager.GetActiveScene().name == "Main")
+            floatingTextManager = floatingTextManagerObj.GetComponent<FloatingTextManager>();
+
+        //Debug.Log("tambine Se llama");
+        //test = GameObject.Find("TileManager");
+    }
 
     private void Awake()
     {
@@ -56,6 +82,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+  
 
         PlayerPrefs.DeleteAll();// Esto me borra todo lo que tengo en el player. Lo puse por que me tiraba error al agregar los int de semillas.
 
@@ -65,7 +92,10 @@ public class GameManager : MonoBehaviour
         //SceneManager.sceneLoaded += LoadState;
         LoadData();
         //Hace que el no se destruya el game manager a medida que cambio de scene
-        DontDestroyOnLoad(gameObject); 
+        DontDestroyOnLoad(gameObject);
+
+        //test = GameObject.Find("Player");
+        //test = GetComponent<TileManager>();
     }
 
  
@@ -122,6 +152,7 @@ public class GameManager : MonoBehaviour
      */
     public void SaveState()
     {
+        
         // String vacio donde ire guardando la informacion del inventario
         string s = " ";
 
@@ -150,35 +181,35 @@ public class GameManager : MonoBehaviour
     }
 
 //REVISAR  O ENTENDER POR QUE NO ME FUNCIONA ESTO, ESTOY USAND LOADDATA para no perder la info.
-    public void LoadState(Scene s, LoadSceneMode mode)
-    {
+    //public void LoadState(Scene s, LoadSceneMode mode)
+    //{
 
-        if (!PlayerPrefs.HasKey("SaveState"))
-            return;
+    //    if (!PlayerPrefs.HasKey("SaveState"))
+    //        return;
 
-        //Agarra el string de SaveState y lo esplitea metiendolo en el array cargando el estado
-        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
+    //    //Agarra el string de SaveState y lo esplitea metiendolo en el array cargando el estado
+    //    string[] data = PlayerPrefs.GetString("SaveState").Split('|');
 
-        //Cargo la plata
-        pesos = int.Parse(data[1]); 
-        choclo = int.Parse(data[2]);
-        stomate = int.Parse(data[3]);
-        //SemZanahoria = int.Parse(data[4]);
+    //    //Cargo la plata
+    //    pesos = int.Parse(data[1]); 
+    //    choclo = int.Parse(data[2]);
+    //    stomate = int.Parse(data[3]);
+    //    //SemZanahoria = int.Parse(data[4]);
 
-        //Cambio la herramienta.
-        Debug.Log("update state");
-        Debug.Log(pesos);
+    //    //Cambio la herramienta.
+    //    Debug.Log("update state");
+    //    Debug.Log(pesos);
         
-    }
+    //}
 
     public void LoadData()
     {
+
         if (!PlayerPrefs.HasKey("SaveState"))
         {
             Debug.Log("no tengo SaveState");
             return;
         }
-            
 
         //pesos = PlayerPrefs.GetInt(plata, 0);
         //Agarra el string de SaveState y lo esplitea metiendolo en el array cargando el estado
