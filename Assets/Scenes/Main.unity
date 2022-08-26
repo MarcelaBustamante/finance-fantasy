@@ -98863,7 +98863,7 @@ PrefabInstance:
     - target: {fileID: 2677401301723748847, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 896433798}
+      objectReference: {fileID: 0}
     - target: {fileID: 2677401301723748847, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
       propertyPath: CoinsTXT
       value: 
@@ -98879,11 +98879,11 @@ PrefabInstance:
     - target: {fileID: 2677401301723748847, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
       propertyPath: tileManager
       value: 
-      objectReference: {fileID: 191481158}
+      objectReference: {fileID: 0}
     - target: {fileID: 2677401301723748847, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
       propertyPath: floatingTextManager
       value: 
-      objectReference: {fileID: 1406459404}
+      objectReference: {fileID: 0}
     - target: {fileID: 8672877608066615590, guid: 55eda0336103b41debc2aba33563fa57, type: 3}
       propertyPath: collectableItems.Array.size
       value: 4
