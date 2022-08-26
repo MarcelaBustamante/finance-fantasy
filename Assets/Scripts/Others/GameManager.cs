@@ -93,9 +93,6 @@ public class GameManager : MonoBehaviour
         LoadData();
         //Hace que el no se destruya el game manager a medida que cambio de scene
         DontDestroyOnLoad(gameObject);
-
-        //test = GameObject.Find("Player");
-        //test = GetComponent<TileManager>();
     }
 
  
@@ -173,9 +170,6 @@ public class GameManager : MonoBehaviour
         //s += "0";
         //PlayerPrefs guarda en memoria un string llamado SaveState con el contenido de mi 
         PlayerPrefs.SetString("SaveState", s);
-        Debug.Log("Save state");
-        Debug.Log(s);
-
         //PlayerPrefs.SetInt(plata, 1);
         //Debug.Log(plata);
     }
