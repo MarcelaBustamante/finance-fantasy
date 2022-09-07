@@ -325,6 +325,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_Button
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 119
+        width: 53
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e23156fa30b440eba230efbab60aba1
+      internalID: -1304434465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -345,6 +366,7 @@ TextureImporter:
       Delete: 2141380308
       x: -1316348430
       inventorytab: -206024850
+      UI_Button: -1304434465
       budget: -1146098676
   spritePackingTag: 
   pSDRemoveMatte: 0
