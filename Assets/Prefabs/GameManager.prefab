@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2677401301723748846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.61, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,8 +55,6 @@ MonoBehaviour:
   player: {fileID: 7151041700102673127, guid: 28d02a4aeeb43a242acff8194791829e, type: 3}
   tileManager: {fileID: 6547049272770850293, guid: 59bca1757ba9e7c44ace465b44e5a7a9, type: 3}
   floatingTextManager: {fileID: 0}
-  plotManager: {fileID: 6570318273611699765, guid: be07ba5d545ca1b448e2d4a21ddf6ca8, type: 3}
-  plantInstantiation: {fileID: 0}
   pesos: 15
   choclo: 0
   tomate: 0
