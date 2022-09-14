@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     public int schoclo;
     public int szapallo;
     public int slechuga;
+    public int roca;
+    public int madera;
 
     
 
@@ -50,7 +52,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Se llama");
+        //Debug.Log("Se llama");
     }
 
     private void Update()
@@ -98,16 +100,6 @@ public class GameManager : MonoBehaviour
  
     public void TakeMoney(float quantity)
     {
-        //if (_currentMoney < quantity)
-        //{
-        //    print($"Something is weird, the {quantity} is greater than current player's money = {_currentMoney}");
-        //    _currentMoney = 0;
-        //    return;
-        //}
-
-        //_currentMoney -= quantity;
-        //PlayerMoneyChanged?.Invoke(_currentMoney);
-
         if(pesos < quantity)
         {
             print($"Something is weird, the {quantity} is greater than current player's money = {_currentMoney}");
@@ -121,9 +113,6 @@ public class GameManager : MonoBehaviour
 
     public void GiveMoney(float quantity)
     {
-        //_currentMoney += quantity;
-        //PlayerMoneyChanged?.Invoke(_currentMoney);
-
         pesos += quantity;
         PlayerMoneyChanged?.Invoke(pesos);
     }
@@ -132,8 +121,6 @@ public class GameManager : MonoBehaviour
     {
         return pesos;
     }
-
-    ///  Fin cosas script fer
 
     // Floating text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -164,7 +151,9 @@ public class GameManager : MonoBehaviour
         s += szana.ToString() + "|";
         s += schoclo.ToString() + "|";
         s += szapallo.ToString() + "|";
-        s += slechuga.ToString(); //No olvidar que el ultimo no lleva el pipe
+        s += slechuga.ToString() + "|";
+        s += roca.ToString() + "|";
+        s += madera.ToString(); //No olvidar que el ultimo no lleva el pipe
 
 
         //s += "0";
@@ -221,6 +210,8 @@ public class GameManager : MonoBehaviour
         schoclo = int.Parse(data[9]);
         szapallo = int.Parse(data[10]);
         slechuga = int.Parse(data[11]);
+        roca = int.Parse(data[12]);
+        madera = int.Parse(data[13]);
 
 
         //Cambio la herramienta.
