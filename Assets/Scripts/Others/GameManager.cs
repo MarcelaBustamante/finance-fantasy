@@ -1,12 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 using FinanceFantasy.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
+#if UNITY_EDITOR
 using UnityEditor.SearchService;
-
+#endif
 public class GameManager : MonoBehaviour
 {
     // Este script es el encargado de guardar el estado del jugador y muchas cosas mas
