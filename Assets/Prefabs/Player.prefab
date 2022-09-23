@@ -75,8 +75,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7151041700295716911}
-  inventory:
-    slots: []
   joystick: {fileID: 0}
 --- !u!114 &3912455351896339002
 MonoBehaviour:

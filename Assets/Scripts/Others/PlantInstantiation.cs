@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;// Required when using Event data.
 
-public class PlantInstantiation : MonoBehaviour
+public class PlantInstantiation : Collidable
 {
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public GameObject choclo;
@@ -15,39 +15,68 @@ public class PlantInstantiation : MonoBehaviour
     public GameObject zapallo;
     private GameObject instantiatedObj;
     private Animator animator;
-
-
-    // This script will simply instantiate the Prefab when the game starts.
-
-    private void Start()
-    {
-       //animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
-       //animator.SetBool("Cosechar", true);
-       //GameManager.instance.player.animator.SetBool("Cosechar", true);
-    }
-
-
+    private int tap = 0;
+   
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.name == "Tomate(Clone)")
         {
             Debug.Log("Choquecon un prefab");
         }
+
+    }
+
+
+    protected override void onCollide(Collider2D coll)
+    {
+        Debug.Log(coll.name);
+        //Debug.Log(tap);
+        if (coll.name == "Rock" && tap > 0)
+        {
+            Debug.Log(coll.name);
+
+            var rock = coll.GetComponent<RockSystem>();
+
+            if (rock)
+            {
+                rock.TakeHit(1);//Quito vida a la piedra
+            }
+            GameManager.instance.player.animator.SetBool("Minar", true);
+            tap = 0;
+
+        }
+        else if(coll.name == "Tree" && tap > 0)
+        {
+            var tree = coll.GetComponent<TreeSystem>();
+
+            if (tree)
+            {
+                tree.TakeHit(1);//Quito vida a la madera
+            }
+            GameManager.instance.player.animator.SetBool("Talar", true);
+            tap = 0;
+        }
+            
     }
 
     public void playerAction()
     {
+
+        tap++;//Registro que estoy haciendo tap en el CTA
+
         Vector3Int position = new Vector3Int(
              Mathf.RoundToInt(transform.position.x),
              Mathf.RoundToInt(transform.position.y),
              0);
 
         if (GameManager.instance.tileManager.TileName(position) != "")
+        {
             instanciarPrefab(position);
-        else
-            Debug.Log("aca no se cosecha");
-
+            tap = 0;
+        }
+            
     }
+
 
     void instanciarPrefab(Vector3Int position)
     {
@@ -59,7 +88,7 @@ public class PlantInstantiation : MonoBehaviour
             case "ttomate":
                 if (GameManager.instance.stomate == 0)
                 {
-                    showMsg();
+                    showMsg("Semillas insuficientes");
                 }
                 else
                 {
@@ -72,7 +101,7 @@ public class PlantInstantiation : MonoBehaviour
             case "tzanahoria":
                 if (GameManager.instance.szana == 0)
                 {
-                    showMsg();
+                    showMsg("Semillas insuficientes");
                 }
                 else
                 {
@@ -85,7 +114,7 @@ public class PlantInstantiation : MonoBehaviour
             case "tzapallo":
                 if (GameManager.instance.szapallo == 0)
                 {
-                    showMsg();
+                    showMsg("Semillas insuficientes");
                 }
                 else
                 {
@@ -98,7 +127,7 @@ public class PlantInstantiation : MonoBehaviour
             case "tlechuga":
                 if (GameManager.instance.slechuga == 0)
                 {
-                    showMsg();
+                    showMsg("Semillas insuficientes");
                 }
                 else
                 {
@@ -111,7 +140,7 @@ public class PlantInstantiation : MonoBehaviour
             case "tchoclo":
                 if (GameManager.instance.schoclo == 0)
                 {
-                    showMsg();
+                    showMsg("Semillas insuficientes");
                 }
                 else
                 {
@@ -123,9 +152,9 @@ public class PlantInstantiation : MonoBehaviour
         }
     }
 
-    private void showMsg()
+    private void showMsg(string txt)
     {
-        GameManager.instance.ShowText("Semillas insuficientes", 50, Color.red, transform.position, Vector3.up * 50, 1.0f);
+        GameManager.instance.ShowText(txt, 50, Color.red, transform.position, Vector3.up * 50, 1.0f);
     }
 
 
