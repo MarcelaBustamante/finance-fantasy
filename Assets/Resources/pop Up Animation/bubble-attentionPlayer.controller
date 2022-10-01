@@ -14,7 +14,7 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3974012623772025552}
-    m_Position: {x: 325, y: 175, z: 0}
+    m_Position: {x: 320, y: 180, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -24,7 +24,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -6913783462130981630}
+  m_DefaultState: {fileID: 3974012623772025552}
 --- !u!1102 &-6913783462130981630
 AnimatorState:
   serializedVersion: 6
@@ -57,7 +57,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bubble-attention
+  m_Name: bubble-attentionPlayer
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -81,7 +81,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: bubbleAnimationPlayer
-  m_Speed: 1
+  m_Speed: 0.22
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

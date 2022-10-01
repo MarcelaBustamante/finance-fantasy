@@ -16,7 +16,8 @@ public class PlantInstantiation : Collidable
     private GameObject instantiatedObj;
     private Animator animator;
     private int tap = 0;
-   
+
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.name == "Tomate(Clone)")
@@ -30,7 +31,8 @@ public class PlantInstantiation : Collidable
     protected override void onCollide(Collider2D coll)
     {
         Debug.Log(coll.name);
-        //Debug.Log(tap);
+        Debug.Log(tap);
+
         if (coll.name == "Rock" && tap > 0)
         {
             Debug.Log(coll.name);
@@ -51,7 +53,7 @@ public class PlantInstantiation : Collidable
 
             if (tree)
             {
-                tree.TakeHit(1);//Quito vida a la madera
+                tree.TakeHit(1);//Quito vida al arbol
             }
             GameManager.instance.player.animator.SetBool("Talar", true);
             tap = 0;
@@ -61,7 +63,6 @@ public class PlantInstantiation : Collidable
 
     public void playerAction()
     {
-
         tap++;//Registro que estoy haciendo tap en el CTA
 
         Vector3Int position = new Vector3Int(
@@ -72,7 +73,7 @@ public class PlantInstantiation : Collidable
         if (GameManager.instance.tileManager.TileName(position) != "")
         {
             instanciarPrefab(position);
-            tap = 0;
+            //tap = 0;
         }
             
     }

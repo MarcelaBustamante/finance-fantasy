@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2677401301723748844}
   - component: {fileID: 2677401301723748847}
   - component: {fileID: 8672877608066615590}
+  - component: {fileID: 5377082638678851586}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -66,6 +67,8 @@ MonoBehaviour:
   schoclo: 0
   szapallo: 0
   slechuga: 0
+  roca: 0
+  madera: 0
 --- !u!114 &8672877608066615590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,3 +86,18 @@ MonoBehaviour:
   - {fileID: 8671517860351709975, guid: 3d9519701f1cca443898581df73d995e, type: 3}
   - {fileID: 1715381011383111589, guid: d377b03df9910984e9b7164a9274cc93, type: 3}
   - {fileID: 3879068219065668942, guid: 2a64f9e409ce44941985062c2874661f, type: 3}
+--- !u!114 &5377082638678851586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2677401301723748846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c6be88150014029b5e491a67e4ef97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUpBox: {fileID: 0}
+  animator: {fileID: 0}
+  popUpText: {fileID: 0}
