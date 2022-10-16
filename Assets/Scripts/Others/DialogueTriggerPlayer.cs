@@ -11,12 +11,18 @@ public class DialogueTriggerPlayer : Collidable
 
         if (coll.name == "Player")
         {
-            if(tuto == 0)
+            //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            if (tuto == 0)
             {
                 FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
                 tuto = 1;
-            }    
-            
+            }
+
         }
+    }
+
+    public void restartConversation()
+    {
+        tuto = 0;
     }
 }
