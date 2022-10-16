@@ -73,5 +73,6 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
+        FindObjectOfType<DialogueTriggerPlayer>().restartConversation();
     }
 }
