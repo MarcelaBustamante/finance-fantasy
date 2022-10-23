@@ -60,14 +60,37 @@ public class GameManager : MonoBehaviour
         GameObject tileManagerObj = GameObject.Find("TileManager");
         GameObject floatingTextManagerObj = GameObject.Find("FloatingTextManager");
 
-        if (player == null )
-            player = playerGameObj.GetComponent<Player>();
+        if (player == null)
+            try
+            {
+                player = playerGameObj.GetComponent<Player>();
+            }
+            catch
+            {
+                //Debug.Log("no se puede instanciar el objeto");
+            }
 
         if (tileManager == null & SceneManager.GetActiveScene().name=="Main")
-            tileManager = tileManagerObj.GetComponent<TileManager>();
+            try
+            {
+                tileManager = tileManagerObj.GetComponent<TileManager>();
+            }
+            catch
+            {
+                //Debug.Log("no se puede instanciar el objeto");
+            }
+        
 
         if (floatingTextManager == null & SceneManager.GetActiveScene().name == "Main")
-            floatingTextManager = floatingTextManagerObj.GetComponent<FloatingTextManager>();
+            try
+            {
+                floatingTextManager = floatingTextManagerObj.GetComponent<FloatingTextManager>();
+            }
+            catch
+            {
+                //Debug.Log("no se puede instanciar el objeto");
+            }
+        
 
         //Debug.Log("tambine Se llama");
         //test = GameObject.Find("TileManager");
