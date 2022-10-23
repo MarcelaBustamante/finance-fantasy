@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public ItemManager itemManager;
     public Inventory inventory;
-
+    
 
     // Recursos
     public List<Sprite> playerSprites;
@@ -90,10 +90,7 @@ public class GameManager : MonoBehaviour
             {
                 //Debug.Log("no se puede instanciar el objeto");
             }
-        
 
-        //Debug.Log("tambine Se llama");
-        //test = GameObject.Find("TileManager");
     }
 
     private void Awake()
@@ -111,9 +108,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.DeleteAll();// Esto me borra todo lo que tengo en el player. Lo puse por que me tiraba error al agregar los int de semillas.
 
         instance = this;
-        // SceneLoaded es un evento que dispara el SceneManager un vez que se carga la escena.
-        // Scene manager va a ir por todas las funciones que hay en LoadState y las va a correr.
-        //SceneManager.sceneLoaded += LoadState;
         LoadData();
         //Hace que el no se destruya el game manager a medida que cambio de scene
         DontDestroyOnLoad(gameObject);
@@ -150,12 +144,6 @@ public class GameManager : MonoBehaviour
         floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
     }
 
-    //Guardo el estado (Pensar que es lo que tenemos que ir guardando entre las distintas scenes
-    /*
-     * int pesos
-     * int manzanas
-     * int herramienta
-     */
     public void SaveState()
     {
         
