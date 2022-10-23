@@ -18,12 +18,24 @@ EditorBuildSettings:
     path: Assets/Scenes/CompraProductos.unity
     guid: c0025a575d21d144bbec7e007b58685c
   - enabled: 1
+    path: Assets/Scenes/solicitudDeCredito.unity
+    guid: 2b7ad464de5ee2f44834276132ef323c
+  - enabled: 1
     path: Assets/Scenes/BankManager.unity
     guid: 1aa01659fcf1eba46b12955c2b8bcbda
-  - enabled: 0
-    path: Assets/Scenes/MainLucas.unity
-    guid: f5ec3de541e83464fb357537fc11c02f
   - enabled: 1
+    path: Assets/Scenes/Banco.unity
+    guid: 89017f79592bb47598c6520e3494226a
+  - enabled: 1
+    path: Assets/Scenes/solicitudDeSeguro.unity
+    guid: f2610cc7ff2b7e846b6b6ddae475b451
+  - enabled: 1
+    path: Assets/Scenes/solicitudDeTarjetaCred.unity
+    guid: 0369f36752e0e2f41a7031551eefd240
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/BankManager.unity
     guid: 1aa01659fcf1eba46b12955c2b8bcbda
   m_configObjects:
