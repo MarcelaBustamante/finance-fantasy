@@ -33,6 +33,20 @@ namespace FinanceFantasy.Bank {
         }
 
         private void Update() {
+
+
+            //GameObject bankMngGameObj = GameObject.Find("BankManager");
+
+            //if (player == null)
+            //    try
+            //    {
+            //        player = playerGameObj.GetComponent<Player>();
+            //    }
+            //    catch
+            //    {
+            //        //Debug.Log("no se puede instanciar el objeto");
+            //    }
+
             if (_playerCurrentCard != null) {
                 if (_playerCurrentCard.PaymentTime <= 0) {
                     //GameManager.instance.TakeMoney(x);
