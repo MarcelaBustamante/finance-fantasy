@@ -11,9 +11,11 @@ namespace FinanceFantasy {
         Destroy(this);
         return;
       }
-
-      Instance = this;
-      DontDestroyOnLoad(this);
+      else{
+            Instance = this;
+            DontDestroyOnLoad(this);
+          }
+      
     }
   }
 }

@@ -6,10 +6,12 @@ namespace FinanceFantasy.Player {
 
     public static Action<float> PlayerMoneyChanged;
 
-    private float _currentMoney = 1000f;
+    //private float _currentMoney = 1000f;
+    private float _currentMoney;  
 
     private void Awake() {
-      // NOT NEED CAN BE REMOVED
+            // NOT NEED CAN BE REMOVED
+      _currentMoney = GameManager.instance.pesos;
       PlayerMoneyChanged?.Invoke(_currentMoney);
     }
 

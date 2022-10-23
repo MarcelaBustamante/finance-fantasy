@@ -34,7 +34,17 @@ namespace FinanceFantasy.Bank {
 
         private void Update() {
 
+            GameObject playerMoney = GameObject.Find("PlayerMoney");
 
+            if (_playerMoney == null)
+                try
+                {
+                    _playerMoney = playerMoney.GetComponent<PlayerMoney>();
+                }
+                catch
+                {
+                    //Debug.Log("no se puede instanciar el objeto");
+                }
             //GameObject bankMngGameObj = GameObject.Find("BankManager");
 
             //if (player == null)
@@ -89,16 +99,23 @@ namespace FinanceFantasy.Bank {
             SignUpWithBank?.Invoke(_playerCurrentCard);
         }
 
-        public void TakeLoan() {
+            public void TakeLoan(){
+            //public void TakeLoan(float plata, int tiempo) {
+
             print("You clicked take loan");
             // TODO: Validation stuff?
             if (_playerCurrentLoan != null) {
                 print("Player can only have 1 loan.");
                 return;
             }
-            
+
+            //var loan = _bankController.TakeLoan(plata, tiempo);
+            //GameManager.instance.GiveMoney(loan.LoanAmount);
+            //_playerMoney.GiveMoney(loan.LoanAmount);
+
             var loan = _bankController.TakeLoan(LoanAmount, loanPaymentTimeInSeconds);
-            // GameManager.instance.GiveMoney(loan.LoanAmount);
+            Debug.Log(LoanAmount);
+            Debug.Log(loanPaymentTimeInSeconds);
             GameManager.instance.GiveMoney(loan.LoanAmount);
             _playerMoney.GiveMoney(loan.LoanAmount);
             _playerCurrentLoan = loan;
