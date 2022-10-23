@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace FinanceFantasy.Bank {
     public class BankManager : MonoSingleton {
-        [SerializeField] private float LoanAmount = 1000f;
+        [SerializeField] private float LoanAmount = 3000f;
         [Tooltip("Tiempo de pago para el prestamo por cuota. En Segundos!!")]
         [SerializeField] private int loanPaymentTimeInSeconds = 3600;
         [Tooltip("Tiempo de pago para la tarjeta de credito. En Segundos!!")]
