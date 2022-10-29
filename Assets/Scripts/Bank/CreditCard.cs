@@ -12,7 +12,7 @@ namespace FinanceFantasy.Bank {
     public CreditCard(int payTimeInSeconds, float payLimit) {
       _cardNumber = BankUtils.Create16DigitString();
       this.Name = "Credit card";
-      MouthPayment = 0f;
+      MouthPayment = 6000f;
       PaymentLimit = payLimit;
       PaymentDetail = new Dictionary<string, float>();
       PayTimeInSeconds = payTimeInSeconds;

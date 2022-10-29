@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1614d065bfd9046bc6bb9f248faa2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoanAmount: 1000
+  LoanAmount: 3000
   loanPaymentTimeInSeconds: 3600
   creditPaymentTimeInSeconds: 3600
 --- !u!114 &7863725504621820205

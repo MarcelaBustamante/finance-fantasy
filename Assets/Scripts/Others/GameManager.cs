@@ -16,10 +16,10 @@ public class GameManager : MonoBehaviour
     
 
     // Recursos
-    public List<Sprite> playerSprites;
-    public List<Sprite> weaponSprites;
-    public List<int> weaponPrices;
-    public List<int> xpTable;
+    //public List<Sprite> playerSprites;
+    //public List<Sprite> weaponSprites;
+    //public List<int> weaponPrices;
+    //public List<int> xpTable;
 
     //Referencias
     public Player player;
@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     //public PlantInstantiation plantInstantiation;
 
     //Logic
+    public float gastosTarjeta;
     public float pesos;
     public int choclo;
     public int tomate;
@@ -150,7 +151,7 @@ public class GameManager : MonoBehaviour
         // String vacio donde ire guardando la informacion del inventario
         string s = " ";
 
-
+        s += gastosTarjeta.ToString() + "|";
         s += pesos.ToString() + "|";
         s += choclo.ToString() + "|";
         s += tomate.ToString() + "|";
@@ -209,19 +210,20 @@ public class GameManager : MonoBehaviour
         string[] data = PlayerPrefs.GetString("SaveState").Split('|');
 
         //Cargo la plata
-        pesos = int.Parse(data[1]);
-        choclo = int.Parse(data[2]);
-        tomate = int.Parse(data[3]);
-        zanahoria = int.Parse(data[4]);
-        lechuga = int.Parse(data[5]);
-        zapallo = int.Parse(data[6]);
-        stomate = int.Parse(data[7]);
-        szana = int.Parse(data[8]);
-        schoclo = int.Parse(data[9]);
-        szapallo = int.Parse(data[10]);
-        slechuga = int.Parse(data[11]);
-        roca = int.Parse(data[12]);
-        madera = int.Parse(data[13]);
+        gastosTarjeta = float.Parse(data[1]);
+        pesos = float.Parse(data[2]);
+        choclo = int.Parse(data[3]);
+        tomate = int.Parse(data[4]);
+        zanahoria = int.Parse(data[5]);
+        lechuga = int.Parse(data[6]);
+        zapallo = int.Parse(data[7]);
+        stomate = int.Parse(data[8]);
+        szana = int.Parse(data[9]);
+        schoclo = int.Parse(data[10]);
+        szapallo = int.Parse(data[11]);
+        slechuga = int.Parse(data[12]);
+        roca = int.Parse(data[13]);
+        madera = int.Parse(data[14]);
 
 
         //Cambio la herramienta.
