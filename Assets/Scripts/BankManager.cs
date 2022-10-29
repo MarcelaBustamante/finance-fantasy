@@ -45,17 +45,6 @@ namespace FinanceFantasy.Bank {
                 {
                     //Debug.Log("no se puede instanciar el objeto");
                 }
-            //GameObject bankMngGameObj = GameObject.Find("BankManager");
-
-            //if (player == null)
-            //    try
-            //    {
-            //        player = playerGameObj.GetComponent<Player>();
-            //    }
-            //    catch
-            //    {
-            //        //Debug.Log("no se puede instanciar el objeto");
-            //    }
 
             if (_playerCurrentCard != null) {
                 if (_playerCurrentCard.PaymentTime <= 0) {

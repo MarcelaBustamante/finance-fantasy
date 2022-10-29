@@ -24,7 +24,6 @@ public class ActionsBank : MonoBehaviour
                 //Debug.Log("no se puede instanciar el objeto");
             }
 
-       
     }
 
     public void pedirCredito()
