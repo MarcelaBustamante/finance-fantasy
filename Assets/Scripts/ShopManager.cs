@@ -75,7 +75,6 @@ public class ShopManager : MonoBehaviour
         this.ToggleCheckoutPannel();
         if (coins >= totalPrice && quota == 0)
         {
-           
             //cliente paga
             coins -= totalPrice;
             shopItems[3, itemID]++;
@@ -85,6 +84,13 @@ public class ShopManager : MonoBehaviour
             GameManager.instance.pesos = coins;
             //se lleva el producto en su inventario y ademas se suma el producto al game manager
             AddProduct(itemID);
+        }
+        else
+        {
+            if (coins < totalPrice && quota < 1)
+            {
+                errorTxt.text = "Fondos insuficientes.";
+            }
         }
         if(quota > 0  && quota < 4)
         {
@@ -110,10 +116,6 @@ public class ShopManager : MonoBehaviour
                 //se lleva el producto en su inventario y ademas se suma el producto al game manager
                 AddProduct(itemID);
             }
-        }
-       if(coins < totalPrice)
-        {
-            errorTxt.text = "Fondos insuficientes.";
         }
     }
 
