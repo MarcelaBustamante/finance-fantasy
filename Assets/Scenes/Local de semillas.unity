@@ -161,9 +161,9 @@ RectTransform:
   m_Father: {fileID: 512456051}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 905, y: -416.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 130, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6224017
@@ -13787,13 +13787,10 @@ MonoBehaviour:
   itemManager: {fileID: 777802773}
   inventory:
     slots: []
-  playerSprites: []
-  weaponSprites: []
-  weaponPrices: 
-  xpTable: 
   player: {fileID: 84240813}
   tileManager: {fileID: 0}
   floatingTextManager: {fileID: 0}
+  gastosTarjeta: 0
   pesos: 2000
   choclo: 0
   tomate: 0
@@ -14476,9 +14473,9 @@ RectTransform:
   m_Father: {fileID: 512456051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 155, y: -416.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 130, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904518175
@@ -18762,9 +18759,9 @@ RectTransform:
   m_Father: {fileID: 512456051}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1280, y: -416.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 130, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442091315
@@ -19253,9 +19250,9 @@ RectTransform:
   m_Father: {fileID: 512456051}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 530, y: -416.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 130, y: 220}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1474188530
@@ -28442,6 +28439,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2916957481698094065, guid: 638dfa5bb8c69c94bb485eecdeee57f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916957481698094078, guid: 638dfa5bb8c69c94bb485eecdeee57f4, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916957481698094078, guid: 638dfa5bb8c69c94bb485eecdeee57f4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 06caed35e50594c919df43455663f100, type: 2}
+    - target: {fileID: 2916957481698094078, guid: 638dfa5bb8c69c94bb485eecdeee57f4, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916957481698094078, guid: 638dfa5bb8c69c94bb485eecdeee57f4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -50858981815496475, guid: 06caed35e50594c919df43455663f100, type: 2}
+    - target: {fileID: 2916957481698094078, guid: 638dfa5bb8c69c94bb485eecdeee57f4, type: 3}
+      propertyPath: m_enableAutoSizing
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
