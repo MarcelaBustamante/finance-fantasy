@@ -23,5 +23,18 @@ public class tutorialTrigger : MonoBehaviour
                 GameManager.instance.tutorial = 1;
             }
         }
+        else if (sceneName == "Local de semillas")
+        {
+            if (GameManager.instance.tutoLocal == 0)
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                //Mato el tutorial para que no aparezca más
+                GameManager.instance.tutoLocal = 1;
+            }
+            else
+            {
+                Debug.Log("no encontre la scene");
+            }
+        }
     }
 }
