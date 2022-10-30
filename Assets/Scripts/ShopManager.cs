@@ -16,7 +16,8 @@ public class ShopManager : MonoBehaviour
     public GameObject checkoutPannel;
     public GameObject checkoutUI;
     private int itemID;
-    
+    private BankManager bankmanager;
+
     [SerializeField] private Dictionary<string, GameObject> collectables;
     GameObject ButtonRef;
     public Player player;
@@ -50,6 +51,23 @@ public class ShopManager : MonoBehaviour
        // shopItems
     }
 
+    void Update()
+    {
+        GameObject bankManagerObj = GameObject.Find("BankManager");
+
+
+        if (bankmanager == null)
+            try
+            {
+                bankmanager = bankManagerObj.GetComponent<BankManager>();
+            }
+            catch
+            {
+                //Debug.Log("no se puede instanciar el objeto");
+            }
+
+    }
+
 
     public void Buy(float totalPrice, int quota)
     {
@@ -71,20 +89,20 @@ public class ShopManager : MonoBehaviour
         if(quota > 0  && quota < 4)
         {
             bool haveCrediCard = false;
-            //TODO:
-           // if (GameManager.instance.AQUIVAMETODOPARASABERSITIENETARJETAONO !=null)
+            
+           if (bankmanager.CurrentCreditCard != null)
             {
                 haveCrediCard = true;
             }
             if (!haveCrediCard)
             {
-                errorTxt.text = "Ustend no tiene tarjeta de crédito, se recomienda ir al banco y pedir una";
+                errorTxt.text = "Ustend no tiene tarjeta de crï¿½dito, se recomienda ir al banco y pedir una";
             }
             else
             {
                 errorTxt.text = "";
                 //cliente paga
-                //TODO:agregar el descuento de  la tarjeta de crédito totalPrice;
+                //TODO:agregar el descuento de  la tarjeta de crï¿½dito totalPrice;
                 shopItems[3, itemID]++;
                 ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, itemID].ToString();
                 //se actualiza el precio en game manager
