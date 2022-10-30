@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public int slechuga;
     public int roca;
     public int madera;
+    public int tutorial = 0;
 
     
 
