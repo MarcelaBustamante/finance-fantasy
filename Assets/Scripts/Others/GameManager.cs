@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public int roca;
     public int madera;
     public int tutorial = 0;
+    public int tutoLocal = 0;
 
     
 
