@@ -18,8 +18,6 @@ public class Checkout_UI : MonoBehaviour
     private int quota = 0;
     public ShopManager shopManager;
 
-
-
     public void Buy()
     {
         shopManager.Buy(totalPrice, quota);

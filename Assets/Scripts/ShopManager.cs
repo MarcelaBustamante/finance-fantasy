@@ -25,7 +25,8 @@ public class ShopManager : MonoBehaviour
     {
         coins = GameManager.instance.GetMoney();
         CoinsTXT.text = "Dinero:" + coins.ToString();
-
+        Debug.Log(BankManager.Instance);
+      
         //ID's
         //Zanahoria
         shopItems[1, 1] = 1;
@@ -72,6 +73,10 @@ public class ShopManager : MonoBehaviour
         if(quota > 0  && quota < 4)
         {
             bool haveCrediCard = false;
+            /*if(bankManager!= null)
+            {
+                haveCrediCard = true;
+            }*/
             if (!haveCrediCard)
             {
                 errorTxt.text = "Ustend no tiene tarjeta de crédito, se recomienda ir al banco y pedir una";
