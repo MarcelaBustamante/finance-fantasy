@@ -156,27 +156,27 @@ public class ShopManager : MonoBehaviour
         switch (itemID)
         {
             case 1:
-                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CARROTE_SEED));
+                //coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CARROTE_SEED));
                 GameManager.instance.szana += 1;
-                GameManager.instance.inventory.Add(coll);
+                //GameManager.instance.inventory.Add(coll);
                 break;
 
             case 2:
-                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.TOMATOES_SEED));
+                //coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.TOMATOES_SEED));
                 GameManager.instance.stomate += 1;
-                GameManager.instance.inventory.Add(coll);
+                //GameManager.instance.inventory.Add(coll);
                 break;
 
             case 3:
-                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.LETTUCE_SEED));
+                //coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.LETTUCE_SEED));
                 GameManager.instance.slechuga += 1;
-                GameManager.instance.inventory.Add(coll);
+                //GameManager.instance.inventory.Add(coll);
                 break;
 
             case 4:
-                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CORN_SEED));
+                //coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CORN_SEED));
                 GameManager.instance.schoclo += 1;
-                GameManager.instance.inventory.Add(coll);
+                //GameManager.instance.inventory.Add(coll);
                 break;
             default:
                 errorTxt.text = "Producto inexistente";
