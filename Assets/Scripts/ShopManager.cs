@@ -16,7 +16,8 @@ public class ShopManager : MonoBehaviour
     public GameObject checkoutPannel;
     public GameObject checkoutUI;
     private int itemID;
-    
+    private BankManager bankmanager;
+
     [SerializeField] private Dictionary<string, GameObject> collectables;
     GameObject ButtonRef;
     public Player player;
@@ -25,8 +26,6 @@ public class ShopManager : MonoBehaviour
     {
         coins = GameManager.instance.GetMoney();
         CoinsTXT.text = "Dinero:" + coins.ToString();
-        Debug.Log(BankManager.Instance);
-      
         //ID's
         //Zanahoria
         shopItems[1, 1] = 1;
@@ -52,6 +51,23 @@ public class ShopManager : MonoBehaviour
        // shopItems
     }
 
+    void Update()
+    {
+        GameObject bankManagerObj = GameObject.Find("BankManager");
+
+
+        if (bankmanager == null)
+            try
+            {
+                bankmanager = bankManagerObj.GetComponent<BankManager>();
+            }
+            catch
+            {
+                //Debug.Log("no se puede instanciar el objeto");
+            }
+
+    }
+
 
     public void Buy(float totalPrice, int quota)
     {
@@ -59,7 +75,6 @@ public class ShopManager : MonoBehaviour
         this.ToggleCheckoutPannel();
         if (coins >= totalPrice && quota == 0)
         {
-           
             //cliente paga
             coins -= totalPrice;
             shopItems[3, itemID]++;
@@ -70,22 +85,30 @@ public class ShopManager : MonoBehaviour
             //se lleva el producto en su inventario y ademas se suma el producto al game manager
             AddProduct(itemID);
         }
+        else
+        {
+            if (coins < totalPrice && quota < 1)
+            {
+                errorTxt.text = "Fondos insuficientes.";
+            }
+        }
         if(quota > 0  && quota < 4)
         {
             bool haveCrediCard = false;
-            /*if(bankManager!= null)
+            
+           if (bankmanager.CurrentCreditCard != null)
             {
                 haveCrediCard = true;
-            }*/
+            }
             if (!haveCrediCard)
             {
-                errorTxt.text = "Ustend no tiene tarjeta de crédito, se recomienda ir al banco y pedir una";
+                errorTxt.text = "Ustend no tiene tarjeta de crï¿½dito, se recomienda ir al banco y pedir una";
             }
             else
             {
                 errorTxt.text = "";
                 //cliente paga
-                //TODO:agregar el descuento de  la tarjeta de crédito totalPrice;
+                //TODO:agregar el descuento de  la tarjeta de crï¿½dito totalPrice;
                 shopItems[3, itemID]++;
                 ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, itemID].ToString();
                 //se actualiza el precio en game manager
@@ -93,10 +116,6 @@ public class ShopManager : MonoBehaviour
                 //se lleva el producto en su inventario y ademas se suma el producto al game manager
                 AddProduct(itemID);
             }
-        }
-       if(coins < totalPrice)
-        {
-            errorTxt.text = "Fondos insuficientes.";
         }
     }
 
@@ -137,27 +156,27 @@ public class ShopManager : MonoBehaviour
         switch (itemID)
         {
             case 1:
-                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CARROTE_SEED));
+                //coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CARROTE_SEED));
                 GameManager.instance.szana += 1;
-                GameManager.instance.inventory.Add(coll);
+                //GameManager.instance.inventory.Add(coll);
                 break;
 
             case 2:
-                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.TOMATOES_SEED));
+                //coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.TOMATOES_SEED));
                 GameManager.instance.stomate += 1;
-                GameManager.instance.inventory.Add(coll);
+                //GameManager.instance.inventory.Add(coll);
                 break;
 
             case 3:
-                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.LETTUCE_SEED));
+                //coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.LETTUCE_SEED));
                 GameManager.instance.slechuga += 1;
-                GameManager.instance.inventory.Add(coll);
+                //GameManager.instance.inventory.Add(coll);
                 break;
 
             case 4:
-                coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CORN_SEED));
+                //coll = Instantiate(GameManager.instance.itemManager.GetItemByType(CollectableType.CORN_SEED));
                 GameManager.instance.schoclo += 1;
-                GameManager.instance.inventory.Add(coll);
+                //GameManager.instance.inventory.Add(coll);
                 break;
             default:
                 errorTxt.text = "Producto inexistente";
